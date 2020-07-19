@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+.section {
+    height: 70vh;
+ }
+
+.section:nth-child(1) {
+   height: 100vh;
+}
+
+.flex-box {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    height: 150px;
+    width: 200px;
+    background: #fff;
+    opacity: 0.7;
+}
