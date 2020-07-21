@@ -1,20 +1,24 @@
-h1 {
-    text-align: center;
-}
-
 .section {
-    height: 70vh;
+    // height: 100vh;
+    background-color: #f8f8f9;
  }
 
 .section:nth-child(1) {
    height: 100vh;
+    // position: relative;
+    // top: 500px;
+    background-color: transparent;
 }
 
 .flex-box {
-    height: 60%;
+    // height: 60%;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
+    img {
+        width: 60%;
+    }
 }
 
 .card {
