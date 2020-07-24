@@ -22,8 +22,9 @@ img {
 #links {
     display: flex;
     align-items: center;
-    a {
+    a , span {
         color: #fff;
         margin-left: 35px;
+        cursor: pointer;
     }
 }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';import AOS from 'aos';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lab-website';
+  title = 'Blockbrainers';
 
   constructor() {
     AOS.init();
