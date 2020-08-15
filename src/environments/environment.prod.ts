@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  languages: [ { value: 'en', label: 'english' }, { value: 'fr', label: 'francais' } ]
 };

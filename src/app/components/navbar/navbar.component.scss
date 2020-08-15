@@ -22,9 +22,39 @@ img {
 #links {
     display: flex;
     align-items: center;
-    a , span {
+    a {
         color: #fff;
         margin-left: 35px;
         cursor: pointer;
+    }
+}
+
+#languages {
+    // background-color: #fff;
+    // margin-left: 35px;
+    // padding: 5px 10px;
+    // border-radius: 2px;
+    // position: relative;
+    select {
+        border: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    span {
+        color: #2b129e;
+        cursor: pointer;
+    }
+    // .dropdown-menu .show {
+    //     top: 10px !important;
+    // }
+    .dropdown-menu {
+        top: 10px !important;
+        border-radius: 0;
+    }
+    
+    .dropdown-item:active {
+        background-color: initial;
     }
 }

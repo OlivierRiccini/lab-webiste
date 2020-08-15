@@ -8,7 +8,17 @@
         <a>Work</a>
         <a>Careers</a>
         <a>Contact</a>
-        <span (click)="onSwitchLang('en')">En</span>
-        <span (click)="onSwitchLang('fr')">Fr</span>
+        <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
+            <a ngbDropdownToggle>
+                {{ currentLang.label | titlecase }}
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu">
+                <span
+                    *ngFor="let availableLang of availableLanguages" 
+                    ngbDropdownItem (click)="$event.preventDefault(); onSwitchLang(availableLang.value)">
+                    {{ availableLang.label | titlecase }}
+                </span>
+            </div>
+        </div>
     </div>
 </nav>
