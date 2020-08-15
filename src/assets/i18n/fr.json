@@ -1,4 +1,12 @@
 {
+    "navbar": {
+        "home-link": "accueil",
+        "about-link": "à propos",
+        "services-link": "nos services",
+        "work-link": "notre travail",
+        "careers-link": "carrières",
+        "contact-link": "nous contacter"
+    },
     "headline": "Nous transformons les bonnes idées en <b>Applications décentralisées</b> connectées à la <b>Blockchain.</b>",
     "contact-button": "Discutons-en"
 }

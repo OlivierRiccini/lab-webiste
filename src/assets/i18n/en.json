@@ -1,4 +1,12 @@
 {
+    "navbar": {
+        "home-link": "home",
+        "about-link": "about",
+        "services-link": "services",
+        "work-link": "work",
+        "careers-link": "careers",
+        "contact-link": "contact"
+    },
     "headline": "We turn great ideas into <b>Decentralized Applications</b> connected to the <b>Blockchain.</b>",
     "contact-button": "Let's talk"
 }

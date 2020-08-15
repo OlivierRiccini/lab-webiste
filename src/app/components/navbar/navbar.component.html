@@ -1,14 +1,16 @@
 <nav data-aos="fade-down">
     <!-- <img src="../../../assets/images/logo-only-icon.png" alt=""> -->
     <!-- <img src="../../../assets/images/white_logo_transparent_background-only-icon.png" alt=""> -->
-    <img src="../../../assets/images/white_logo_transparent_background.png" alt="">
+    <a routerLink="home">
+        <img src="../../../assets/images/white_logo_transparent_background.png" alt="">
+    </a>
     <div id="links">
-        <a routerLink="home" routerLinkActive="active">Home</a>
-        <a routerLink="about" routerLinkActive="active">About</a>
-        <a routerLink="services" routerLinkActive="active">Services</a>
-        <a routerLink="work" routerLinkActive="active">Work</a>
-        <a routerLink="careers" routerLinkActive="active">Careers</a>
-        <a routerLink="contact" routerLinkActive="active">Contact</a>
+        <a routerLink="home" routerLinkActive="active">{{ 'navbar.home-link' | translate | titlecase }}</a>
+        <a routerLink="about" routerLinkActive="active">{{ 'navbar.about-link' | translate | titlecase }}</a>
+        <a routerLink="services" routerLinkActive="active">{{ 'navbar.services-link' | translate | titlecase }}</a>
+        <a routerLink="work" routerLinkActive="active">{{ 'navbar.work-link' | translate | titlecase }}</a>
+        <a routerLink="careers" routerLinkActive="active">{{ 'navbar.careers-link' | translate | titlecase }}</a>
+        <a routerLink="contact" routerLinkActive="active">{{ 'navbar.contact-link' | translate | titlecase }}</a>
         <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
             <a ngbDropdownToggle>
                 {{ currentLang.label | titlecase }}

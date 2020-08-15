@@ -1,3 +1,5 @@
+@import 'src/sass/variables';
+
 .context {
     position: absolute;
     z-index: 1;
@@ -5,12 +7,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 80px;
+    top: $navbarHeight;
 }
 
 .area {
-    background: #2b129e;
-    background: -webkit-linear-gradient(to left, #0041f7, #2b129e);   
+    background: $blue;
+    background: -webkit-linear-gradient(to left, #0041f7, $blue);   
     width: 100vw;
     height:100vh;
     position: fixed;
