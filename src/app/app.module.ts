@@ -10,13 +10,23 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './components/about/about.component';
+import { ServicesComponent } from './components/services/services.component';
+import { WorkComponent } from './components/work/work.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    LandingComponent
+    LandingComponent,
+    AboutComponent,
+    ServicesComponent,
+    WorkComponent,
+    CareersComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

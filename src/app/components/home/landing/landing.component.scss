@@ -1,20 +1,17 @@
 .flex-container {
     height: 100%;
+    position: relative;
+    top: -80px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
-    // position: absolute;
 }
 
 .content {
     padding: 35px;
-    // background: #fff;
-    // color: #4a7ff0;
     width: 80%;
     border-left: 1px solid #fff;
     p {
-        // background: #ffd200;
         margin: 0;
         font-size: 52px;
     }
@@ -28,17 +25,6 @@
         font-size: 22px;
         border-radius: 3px;
         background: #ffb100;
-        // background: #d61385;
         margin-top: 30px;
-        // border: 1px solid #4a7ff0;
     }
 }
-// div {
-//     background: #fff;
-//     color: #4a7ff0;
-//     padding: 25px;
-//     p {
-//         margin: 0;
-//         font-size: 52px;
-//     }
-// }

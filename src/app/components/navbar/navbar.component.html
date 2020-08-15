@@ -3,11 +3,12 @@
     <!-- <img src="../../../assets/images/white_logo_transparent_background-only-icon.png" alt=""> -->
     <img src="../../../assets/images/white_logo_transparent_background.png" alt="">
     <div id="links">
-        <a>About</a>
-        <a>Services</a>
-        <a>Work</a>
-        <a>Careers</a>
-        <a>Contact</a>
+        <a routerLink="home" routerLinkActive="active">Home</a>
+        <a routerLink="about" routerLinkActive="active">About</a>
+        <a routerLink="services" routerLinkActive="active">Services</a>
+        <a routerLink="work" routerLinkActive="active">Work</a>
+        <a routerLink="careers" routerLinkActive="active">Careers</a>
+        <a routerLink="contact" routerLinkActive="active">Contact</a>
         <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
             <a ngbDropdownToggle>
                 {{ currentLang.label | titlecase }}
