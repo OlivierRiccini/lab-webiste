@@ -1,9 +1,15 @@
-<nav data-aos="fade-down">
-    <!-- <img src="../../../assets/images/logo-only-icon.png" alt=""> -->
-    <!-- <img src="../../../assets/images/white_logo_transparent_background-only-icon.png" alt=""> -->
-    <a routerLink="home">
-        <img src="../../../assets/images/white_logo_transparent_background.png" alt="">
-    </a>
+<nav [ngClass]="currentTheme === Theme.LIGHT ? 'light-nav': 'dark-nav'" data-aos="fade-down">
+    <div class="nav-right">
+        <label for="toggle">
+            <input class="input" id="toggle" type="checkbox" (change)="onSwitchThem()"/>
+            <div class="toggle-wrapper"><span class="selector"></span></div>
+        </label>
+    
+        <a routerLink="home">
+            <img [src]="imgUrl" alt="">
+        </a>
+    </div>
+    
     <div id="links">
         <a routerLink="home" routerLinkActive="active">{{ 'navbar.home-link' | translate | titlecase }}</a>
         <a routerLink="about" routerLinkActive="active">{{ 'navbar.about-link' | translate | titlecase }}</a>

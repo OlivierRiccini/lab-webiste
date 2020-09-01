@@ -8,5 +8,39 @@
         "contact-link": "nous contacter"
     },
     "headline": "Nous transformons les bonnes idées en <b>Applications décentralisées</b> connectées à la <b>Blockchain.</b>",
-    "contact-button": "Discutons-en"
+    "contact-button": "Discutons-en",
+    "contact": {
+        "form": {
+            "firstName": {
+                "label": "prénom",
+                "placeholder": "Entrez votre prénom",
+                "error": {
+                    "required": "Le prénom est requis"
+                }
+            },
+            "lastName": {
+                "label": "nom",
+                "placeholder": "Entrez votre nom",
+                "error": {
+                    "required": "Le nom est requis"
+                }
+            },
+            "email": {
+                "label": "courriel",
+                "placeholder": "Entrez votre adresse courriel",
+                "error": {
+                    "required": "L'adresse courriel est requise",
+                    "invalid": "Veuillez entrer une adresse courriel valide"
+                }
+            },
+            "message": {
+                "label": "message",
+                "placeholder": "Tapez votre message ici...",
+                "error": {
+                    "required": "Le message est requis"
+                }
+            },
+            "send": "Envoyer"
+        }
+    }
 }

@@ -1,20 +1,23 @@
 @import 'src/sass/variables';
 
 nav {
-    // position: fixed;
     width: -webkit-fill-available;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    color: #fff;
-    // background-color: transparent;
-    background: $blue;
-    // padding: 0 20px;
-    // height: 100px;
     position: fixed;
     padding: 0px 50px;
     height: 80px;
+}
+
+
+.dark-nav {
+    background: $darkBlue;
+}
+
+.light-nav {
+    background: $lightGrey;
 }
 
 img {
@@ -25,7 +28,6 @@ img {
     display: flex;
     align-items: center;
     a {
-        color: #fff;
         margin-left: 35px;
         padding-bottom: 3px;
         cursor: pointer;
@@ -38,15 +40,9 @@ img {
 
 .active {
     border-bottom: 1px solid #fff;
-    // padding-bottom: 3px
 }
 
 #languages {
-    // background-color: #fff;
-    // margin-left: 35px;
-    // padding: 5px 10px;
-    // border-radius: 2px;
-    // position: relative;
     select {
         border: none;
         cursor: pointer;
@@ -55,12 +51,8 @@ img {
         }
     }
     span {
-        color: $blue;
         cursor: pointer;
     }
-    // .dropdown-menu .show {
-    //     top: 10px !important;
-    // }
     .dropdown-menu {
         top: 10px !important;
         border-radius: 0;
@@ -70,3 +62,49 @@ img {
         background-color: initial;
     }
 }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    pointer-events: none;
+    margin: 0;
+    .input {
+      display: none;
+      &:checked + .toggle-wrapper {
+        box-shadow: 0 8px 14px 0 rgba(darken($darkBlue, 12%), 0.12);
+      }
+      &:checked + .toggle-wrapper > .selector {
+        left: calc(100% - 25px);
+        background-color: $darkBlue;
+      }
+      &:checked ~ .notification > .selected:before {
+        content: "Yes";
+      }
+    }
+    .toggle-wrapper {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background-color: #eaeaea;
+      border-radius: 999px;
+      margin: auto;
+      cursor: pointer;
+      pointer-events: all;
+      box-shadow: 0 8px 14px 0 rgba(darken($darkGrey, 12%), 0.12);
+      .selector {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        background-color: $darkGrey;
+        transition: left 0.25s ease;
+        border-radius: 50%;
+      }
+    }
+}
+  

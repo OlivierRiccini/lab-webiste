@@ -2,9 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { Theme } from 'src/app/models/theme';
+
 export const environment = {
   production: false,
-  languages: [ { value: 'en', label: 'english' }, { value: 'fr', label: 'francais' } ]
+  defaultTheme: Theme.LIGHT,
+  languages: [ { value: 'en', label: 'english' }, { value: 'fr', label: 'francais' } ],
+  contactEmail: 'hello@blockbrainers.com',
+  emailerApiUrl: 'https://bb-emailer-api.herokuapp.com/email'
 };
 
 /*

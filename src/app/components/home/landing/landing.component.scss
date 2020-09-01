@@ -2,8 +2,6 @@
 
 .flex-container {
     height: 100%;
-    position: relative;
-    top: calc(0px - #{$navbarHeight});
     display: flex;
     flex-direction: column;
     justify-content: center;

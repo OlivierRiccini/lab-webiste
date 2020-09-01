@@ -1,0 +1,16 @@
+@import 'src/sass/variables';
+
+footer {
+    // margin-top: 50px;
+    // padding: 50px 0;
+    height: $footerHeight;
+    // border-top: 1px solid #fff;
+    // position: absolute;
+    z-index: 1;
+    // background-color: red;
+    margin: 50px calc(0px - #{$globalSidesPadding}) 0 calc(0px - #{$globalSidesPadding});
+    // top: 100%;
+    // width: 100%;
+    // position: absolute;
+    // top: 100%;
+}

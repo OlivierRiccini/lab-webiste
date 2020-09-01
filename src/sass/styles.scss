@@ -7,10 +7,32 @@
 @import 'src/sass/variables';
 
 body {
-    color: #fff;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     letter-spacing: 1.5px;
     margin: 0px;
     overflow-x: hidden;
+}
+
+.dark-body {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}
+
+.light-body {
+    color: $darkGrey;
+    a, span {
+        color: $darkGrey;  
+    }
+}
+
+.page-container {
+    margin-top: $navbarHeight;
+    min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight} - #{$globalSidesPadding});
+}
+
+ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-slide:focus {
+    outline: none !important;
 }

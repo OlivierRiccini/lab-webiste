@@ -1,0 +1,34 @@
+#container {
+    // background-color: #fff;
+    // padding: 50px 100px;
+    // background-color: green;
+}
+
+// h2 {
+//     color: initial;
+// }
+
+
+img {
+    width: 100%;
+}
+
+.picsum-img-wrapper {
+    width: 60%;
+    text-align: center;
+}
+
+// .carousel-inner:focus {
+//     outline: none !important;
+// }
+
+.flex-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    // background-color: green;
+}

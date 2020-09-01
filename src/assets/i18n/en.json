@@ -8,5 +8,39 @@
         "contact-link": "contact"
     },
     "headline": "We turn great ideas into <b>Decentralized Applications</b> connected to the <b>Blockchain.</b>",
-    "contact-button": "Let's talk"
+    "contact-button": "Let's talk",
+    "contact": {
+        "form": {
+            "firstName": {
+                "label": "First name",
+                "placeholder": "Enter your first name",
+                "error": {
+                    "required": "First name is required"
+                }
+            },
+            "lastName": {
+                "label": "Last name",
+                "placeholder": "Enter your last name",
+                "error": {
+                    "required": "Last name is required"
+                }
+            },
+            "email": {
+                "label": "email",
+                "placeholder": "Enter your email address",
+                "error": {
+                    "required": "Email address is required",
+                    "invalid": "Please provide a valid email address"
+                }
+            },
+            "message": {
+                "label": "message",
+                "placeholder": "Type your message here...",
+                "error": {
+                    "required": "Message is required"
+                }
+            },
+            "send": "send"
+        }
+    }
 }

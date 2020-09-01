@@ -3,16 +3,16 @@
 .context {
     position: absolute;
     z-index: 1;
-    padding: 0 50px;
+    padding: 0 $globalSidesPadding;
     left: 0;
     right: 0;
-    bottom: 0;
-    top: $navbarHeight;
+    // bottom: 0;
+    // top: $navbarHeight;
 }
 
 .area {
-    background: $blue;
-    background: -webkit-linear-gradient(to left, #0041f7, $blue);   
+    // background: $blue;
+    // background: -webkit-linear-gradient(to left, $blue, $darkBlue);   
     width: 100vw;
     height:100vh;
     position: fixed;
@@ -38,9 +38,31 @@ ul {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    // background: rgba(255, 255, 255, 0.2);
+    // background: $darkBlue;
+    opacity: 0.2;
     animation: animate 25s linear infinite;
     bottom: -150px;
+}
+
+.light-body {
+    .area {
+        background: $lightGrey;
+        background: -webkit-linear-gradient(to left, $lightGrey, $grey); 
+    }
+    .circles li {
+        background: $grey;
+    } 
+}
+
+.dark-body {
+    .area {
+        background: $darkBlue;
+        background: -webkit-linear-gradient(to left, $blue, $darkBlue);  
+    }
+    .circles li {
+        background: rgba(255, 255, 255, 0.2);
+    } 
 }
 
 .circles li:nth-child(1) {
@@ -118,8 +140,6 @@ ul {
     animation-delay: 0s;
     animation-duration: 11s;
 }
-
-
 
 @keyframes animate {
     0% {
