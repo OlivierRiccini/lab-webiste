@@ -13,6 +13,7 @@ export class AppComponent implements OnDestroy {
   public Theme = Theme;
   public currentTheme: Theme;
   private subscription = new Subscription();
+  public topened = false;
 
   constructor(private globalConfigService: GlobalConfigService) {
     AOS.init();
@@ -29,4 +30,9 @@ export class AppComponent implements OnDestroy {
     });
     this.subscription.add(subscription);
   }
+
+  public _toggleSidebar() {
+    this.topened = !this.topened;
+  }
+
 }

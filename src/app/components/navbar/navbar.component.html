@@ -5,18 +5,18 @@
             <div class="toggle-wrapper"><span class="selector"></span></div>
         </label>
     
-        <a routerLink="home">
+        <a (click)="onScroll('#home')" routerLink="" fragment="home">
             <img [src]="imgUrl" alt="">
         </a>
     </div>
     
     <div id="links">
-        <a routerLink="home" routerLinkActive="active">{{ 'navbar.home-link' | translate | titlecase }}</a>
-        <a routerLink="about" routerLinkActive="active">{{ 'navbar.about-link' | translate | titlecase }}</a>
-        <a routerLink="services" routerLinkActive="active">{{ 'navbar.services-link' | translate | titlecase }}</a>
-        <a routerLink="work" routerLinkActive="active">{{ 'navbar.work-link' | translate | titlecase }}</a>
-        <a routerLink="careers" routerLinkActive="active">{{ 'navbar.careers-link' | translate | titlecase }}</a>
-        <a routerLink="contact" routerLinkActive="active">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+        <!-- <a routerLink="" fragment="home">{{ 'navbar.home-link' | translate | titlecase }}</a> -->
+        <!-- <a routerLink="" fragment="about">{{ 'navbar.about-link' | translate | titlecase }}</a> -->
+        <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
+        <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a>
+        <a routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
+        <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
         <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
             <a ngbDropdownToggle>
                 {{ currentLang.label | titlecase }}

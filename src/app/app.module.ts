@@ -10,17 +10,14 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AboutComponent } from './components/about/about.component';
-import { ServicesComponent } from './components/services/services.component';
-import { WorkComponent } from './components/work/work.component';
 import { CareersComponent } from './components/careers/careers.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { HomeWorkComponent } from './components/home/home-work/home-work.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeServicesComponent } from './components/home/home-services/home-services.component';
 import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 @NgModule({
   declarations: [
@@ -28,11 +25,7 @@ import { HomeContactComponent } from './components/home/home-contact/home-contac
     HomeComponent,
     NavbarComponent,
     LandingComponent,
-    AboutComponent,
-    ServicesComponent,
-    WorkComponent,
     CareersComponent,
-    ContactComponent,
     HomeWorkComponent,
     FooterComponent,
     HomeServicesComponent,
@@ -45,6 +38,8 @@ import { HomeContactComponent } from './components/home/home-contact/home-contac
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPageScrollCoreModule.forRoot({scrollInView: true}),
+    BrowserModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

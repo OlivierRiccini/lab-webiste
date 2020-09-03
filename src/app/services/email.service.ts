@@ -24,7 +24,7 @@ export class EmailService {
       from: email.from,
       to: environment.contactEmail,
       subject: 'Hello Blockbrainers!',
-      html: `<div style="padding:25px">
+      html: `<div style="padding:15px">
               <p><b>Sender first name: </b>${email.firstName}</p>
               <p><b>Sender last name: </b>${email.lastName}</p>
               <p><b>Contact email: </b>${email.from}</p>

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { GlobalConfigService } from 'src/app/services/global-config.service';
 import { Observable, Subscription } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,11 @@ export class NavbarComponent implements OnDestroy {
   public Theme = Theme;
   private subscription = new Subscription();
 
-  constructor(private translateService: TranslateService, private globalConfigService: GlobalConfigService) {
+  constructor(
+    private translateService: TranslateService,
+    private globalConfigService: GlobalConfigService,
+    private navigationService: NavigationService
+    ) {
     const browserLang = this.translateService.getBrowserLang().toLowerCase();
     const langValues = this.availableLanguages.map(lang => lang.value);
     const defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
@@ -39,6 +44,10 @@ export class NavbarComponent implements OnDestroy {
 
   public onSwitchThem(): void {
     this.globalConfigService.switchTheme();
+  }
+
+  public onScroll(target: string): void {
+    this.navigationService.scrollTo(target);
   }
 
   private handleThemeChanges(): void {

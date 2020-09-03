@@ -3,7 +3,10 @@
 .section {
     margin-bottom: 200px;
     // background-color: #f8f8f9;
-    // min-height: calc(100vh - #{$navbarHeight});
+    min-height: calc(100vh - #{$navbarHeight});
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
 .section:nth-child(1) {
