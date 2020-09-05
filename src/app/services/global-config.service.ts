@@ -3,7 +3,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Theme } from '../models/theme';
 import { environment } from 'src/environments/environment';
 import { first } from 'rxjs/operators';
-import { DeviceWidth } from '../models/deviceWidth';
 
 @Injectable({
   providedIn: 'root'
