@@ -5,7 +5,6 @@ import { GlobalConfigService } from 'src/app/services/global-config.service';
 import { Observable, Subscription } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
 import { NavigationService } from 'src/app/services/navigation.service';
-import { DeviceWidth } from 'src/app/models/deviceWidth';
 
 @Component({
   selector: 'app-navbar',
@@ -18,8 +17,6 @@ export class NavbarComponent implements OnDestroy {
   public availableLanguages = environment.languages;
   public currentTheme: Theme;
   public Theme = Theme;
-  public currentWidth: DeviceWidth;
-  public DeviceWidth = DeviceWidth;
   private subscription = new Subscription();
 
   constructor(
@@ -34,7 +31,6 @@ export class NavbarComponent implements OnDestroy {
     this.translateService.addLangs(langValues);
     this.translateService.setDefaultLang(defaultLang);
     this.handleThemeChanges();
-    this.handleWindowWidthChanges();
   }
 
   public ngOnDestroy(): void {
@@ -57,40 +53,9 @@ export class NavbarComponent implements OnDestroy {
   private handleThemeChanges(): void {
     const subscription = this.globalConfigService.theme$.subscribe(theme => {
       this.currentTheme = theme;
-      // if (this.currentTheme) {
-        this.defineLogo();
-      // }
-    });
-    // white_logo_transparent_background-only-icon
-    this.subscription.add(subscription);
-  }
-
-  private handleWindowWidthChanges(): void {
-    const subscription = this.globalConfigService.deviceWidth$.subscribe(width => {
-      this.currentWidth = width;
-      // if (this.currentWidth || this.currentWidth === 0) {
-        this.defineLogo();
-      // }
+      this.imgUrl = theme === Theme.LIGHT ? '../../../assets/images/logo_transparent_background.png' : '../../../assets/images/white_logo_transparent_background.png';
     });
     this.subscription.add(subscription);
-  }
-
-  private defineLogo(): void {
-    console.log('CHANGE W ', this.currentWidth);
-    if (this.currentWidth === DeviceWidth.xs) {
-      if (this.currentTheme === Theme.LIGHT) {
-        this.imgUrl = '../../../assets/images/logo_transparent_background-only-icon.png';
-      } else {
-        this.imgUrl = '../../../assets/images/white_logo_transparent_background-only-icon.png';
-      }
-    } else {
-      if (this.currentTheme === Theme.LIGHT) {
-        this.imgUrl = '../../../assets/images/logo_transparent_background.png';
-      } else {
-        this.imgUrl = '../../../assets/images/white_logo_transparent_background.png';
-      }
-    }
-    console.log('CHANGE ', this.imgUrl);
   }
 
 

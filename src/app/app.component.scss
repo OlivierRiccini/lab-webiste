@@ -1,9 +1,5 @@
 @import 'src/sass/variables';
 
-ng-sidebar-container {
-    width: 100vw;
-    height: 100vh;
-}
 .context {
     position: absolute;
     z-index: 1;
@@ -154,5 +150,12 @@ ul {
     100% {
         transform: translateY(-1000px);
         opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .context {
+        padding: 5px;
     }
 }

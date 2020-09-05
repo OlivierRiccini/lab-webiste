@@ -9,12 +9,7 @@ export const environment = {
   defaultTheme: Theme.LIGHT,
   languages: [ { value: 'en', label: 'english' }, { value: 'fr', label: 'francais' } ],
   contactEmail: 'hello@blockbrainers.com',
-  emailerApiUrl: 'https://bb-emailer-api.herokuapp.com/email',
-  widthBreakpoints: {
-    xs: 500,
-    s: 700,
-    m: 1100
-  }
+  emailerApiUrl: 'https://bb-emailer-api.herokuapp.com/email'
 };
 
 /*

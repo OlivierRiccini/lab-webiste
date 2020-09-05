@@ -2,7 +2,7 @@
     <div id="sidebar-toggler" (click)="onToggleSideNav()">
         Menu
     </div>
-    <nav>
+    <nav (click)="onToggleSideNav()">
         <ul>
             <li>
                 <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
