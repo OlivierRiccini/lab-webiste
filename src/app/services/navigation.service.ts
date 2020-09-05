@@ -10,8 +10,6 @@ export class NavigationService {
   public scroll$: Observable<string>;
 
   constructor(private route: ActivatedRoute) {
-    // this.router.url.indexOf('#');
-    // console.log(this.route.snapshot);
     this.scroll = new BehaviorSubject(null);
     this.scroll$ = this.scroll.asObservable();
   }

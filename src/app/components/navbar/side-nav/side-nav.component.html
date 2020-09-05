@@ -1,0 +1,35 @@
+<div id="sidebar-wrapper" [ngClass]="open ? 'open' : 'close'">
+    <div id="sidebar-toggler" (click)="onToggleSideNav()">
+        Menu
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
+            </li>
+            <li>
+                <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a>
+            </li>
+            <li>
+                <a routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
+            </li>
+            <li>
+                <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+            </li>
+            <li>
+                <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
+                    <a ngbDropdownToggle>
+                        {{ currentLang.label | titlecase }}
+                    </a>
+                    <div ngbDropdownMenu class="dropdown-menu">
+                        <span
+                            *ngFor="let availableLang of availableLanguages" 
+                            ngbDropdownItem (click)="$event.preventDefault(); onSwitchLang(availableLang.value)">
+                            {{ availableLang.label | titlecase }}
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>

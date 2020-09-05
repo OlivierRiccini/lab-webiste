@@ -1,0 +1,20 @@
+<nav>
+    <!-- <a routerLink="" fragment="home">{{ 'navbar.home-link' | translate | titlecase }}</a> -->
+    <!-- <a routerLink="" fragment="about">{{ 'navbar.about-link' | translate | titlecase }}</a> -->
+    <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
+    <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a>
+    <a routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
+    <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+    <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
+        <a ngbDropdownToggle>
+            {{ currentLang.label | titlecase }}
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu">
+            <span
+                *ngFor="let availableLang of availableLanguages" 
+                ngbDropdownItem (click)="$event.preventDefault(); onSwitchLang(availableLang.value)">
+                {{ availableLang.label | titlecase }}
+            </span>
+        </div>
+    </div>
+</nav>

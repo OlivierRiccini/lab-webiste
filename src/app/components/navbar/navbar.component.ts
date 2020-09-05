@@ -5,6 +5,7 @@ import { GlobalConfigService } from 'src/app/services/global-config.service';
 import { Observable, Subscription } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
 import { NavigationService } from 'src/app/services/navigation.service';
+import { DeviceWidth } from 'src/app/models/deviceWidth';
 
 @Component({
   selector: 'app-navbar',
@@ -17,12 +18,14 @@ export class NavbarComponent implements OnDestroy {
   public availableLanguages = environment.languages;
   public currentTheme: Theme;
   public Theme = Theme;
+  public currentWidth: DeviceWidth;
+  public DeviceWidth = DeviceWidth;
   private subscription = new Subscription();
 
   constructor(
-    private translateService: TranslateService,
-    private globalConfigService: GlobalConfigService,
-    private navigationService: NavigationService
+    public translateService: TranslateService,
+    public globalConfigService: GlobalConfigService,
+    public navigationService: NavigationService
     ) {
     const browserLang = this.translateService.getBrowserLang().toLowerCase();
     const langValues = this.availableLanguages.map(lang => lang.value);
@@ -31,6 +34,7 @@ export class NavbarComponent implements OnDestroy {
     this.translateService.addLangs(langValues);
     this.translateService.setDefaultLang(defaultLang);
     this.handleThemeChanges();
+    this.handleWindowWidthChanges();
   }
 
   public ngOnDestroy(): void {
@@ -42,7 +46,7 @@ export class NavbarComponent implements OnDestroy {
     this.currentLang = this.availableLanguages.find(lang => lang.value === langValue);
   }
 
-  public onSwitchThem(): void {
+  public onSwitchTheme(): void {
     this.globalConfigService.switchTheme();
   }
 
@@ -53,9 +57,40 @@ export class NavbarComponent implements OnDestroy {
   private handleThemeChanges(): void {
     const subscription = this.globalConfigService.theme$.subscribe(theme => {
       this.currentTheme = theme;
-      this.imgUrl = theme === Theme.LIGHT ? '../../../assets/images/logo_transparent_background.png' : '../../../assets/images/white_logo_transparent_background.png';
+      // if (this.currentTheme) {
+        this.defineLogo();
+      // }
+    });
+    // white_logo_transparent_background-only-icon
+    this.subscription.add(subscription);
+  }
+
+  private handleWindowWidthChanges(): void {
+    const subscription = this.globalConfigService.deviceWidth$.subscribe(width => {
+      this.currentWidth = width;
+      // if (this.currentWidth || this.currentWidth === 0) {
+        this.defineLogo();
+      // }
     });
     this.subscription.add(subscription);
+  }
+
+  private defineLogo(): void {
+    console.log('CHANGE W ', this.currentWidth);
+    if (this.currentWidth === DeviceWidth.xs) {
+      if (this.currentTheme === Theme.LIGHT) {
+        this.imgUrl = '../../../assets/images/logo_transparent_background-only-icon.png';
+      } else {
+        this.imgUrl = '../../../assets/images/white_logo_transparent_background-only-icon.png';
+      }
+    } else {
+      if (this.currentTheme === Theme.LIGHT) {
+        this.imgUrl = '../../../assets/images/logo_transparent_background.png';
+      } else {
+        this.imgUrl = '../../../assets/images/white_logo_transparent_background.png';
+      }
+    }
+    console.log('CHANGE ', this.imgUrl);
   }
 
 

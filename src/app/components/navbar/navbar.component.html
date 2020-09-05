@@ -1,7 +1,7 @@
-<nav [ngClass]="currentTheme === Theme.LIGHT ? 'light-nav': 'dark-nav'" data-aos="fade-down">
-    <div class="nav-right">
+<div class="flex-nav" [ngClass]="currentTheme === Theme.LIGHT ? 'light-nav': 'dark-nav'" data-aos="fade-down">
+    <div class="logo-container">
         <label for="toggle">
-            <input class="input" id="toggle" type="checkbox" (change)="onSwitchThem()"/>
+            <input class="input" id="toggle" type="checkbox" (change)="onSwitchTheme()"/>
             <div class="toggle-wrapper"><span class="selector"></span></div>
         </label>
     
@@ -9,25 +9,6 @@
             <img [src]="imgUrl" alt="">
         </a>
     </div>
-    
-    <div id="links">
-        <!-- <a routerLink="" fragment="home">{{ 'navbar.home-link' | translate | titlecase }}</a> -->
-        <!-- <a routerLink="" fragment="about">{{ 'navbar.about-link' | translate | titlecase }}</a> -->
-        <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
-        <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a>
-        <a routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
-        <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
-        <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
-            <a ngbDropdownToggle>
-                {{ currentLang.label | titlecase }}
-            </a>
-            <div ngbDropdownMenu class="dropdown-menu">
-                <span
-                    *ngFor="let availableLang of availableLanguages" 
-                    ngbDropdownItem (click)="$event.preventDefault(); onSwitchLang(availableLang.value)">
-                    {{ availableLang.label | titlecase }}
-                </span>
-            </div>
-        </div>
-    </div>
-</nav>
+    <app-top-nav></app-top-nav>
+    <app-side-nav></app-side-nav>
+</div>

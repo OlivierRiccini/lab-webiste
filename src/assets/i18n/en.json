@@ -1,7 +1,5 @@
 {
     "navbar": {
-        "home-link": "home",
-        "about-link": "about",
         "services-link": "services",
         "work-link": "work",
         "careers-link": "careers",

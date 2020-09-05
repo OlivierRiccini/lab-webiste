@@ -18,6 +18,8 @@ import { ContactFormComponent } from './components/shared/contact-form/contact-f
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
+import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     FooterComponent,
     HomeServicesComponent,
     ContactFormComponent,
-    HomeContactComponent
+    HomeContactComponent,
+    TopNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
