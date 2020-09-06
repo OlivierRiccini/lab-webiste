@@ -7,7 +7,8 @@
     align-items: center;
     z-index: 2;
     position: fixed;
-    padding: 0px 50px;
+    width: 100vw;
+    padding: 0px $globalSidesPadding;
     height: 80px;
 }
 
@@ -91,7 +92,7 @@ app-top-nav {
 
 @media screen and (max-width: 500px) {
     .flex-nav {
-        padding: 0px 5px;
+        padding: 0px $globalSidesPaddingSmall;
     }
 }
 

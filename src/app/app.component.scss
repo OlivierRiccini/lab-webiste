@@ -6,13 +6,9 @@
     padding: 0 $globalSidesPadding;
     left: 0;
     right: 0;
-    // bottom: 0;
-    // top: $navbarHeight;
 }
 
 .area {
-    // background: $blue;
-    // background: -webkit-linear-gradient(to left, $blue, $darkBlue);   
     width: 100vw;
     height:100vh;
     position: fixed;
@@ -38,8 +34,6 @@ ul {
     list-style: none;
     width: 20px;
     height: 20px;
-    // background: rgba(255, 255, 255, 0.2);
-    // background: $darkBlue;
     opacity: 0.2;
     animation: animate 25s linear infinite;
     bottom: -150px;
@@ -156,6 +150,6 @@ ul {
 
 @media screen and (max-width: 500px) {
     .context {
-        padding: 5px;
+        padding: $globalSidesPaddingSmall;
     }
 }

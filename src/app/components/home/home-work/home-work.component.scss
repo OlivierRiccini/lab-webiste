@@ -1,3 +1,5 @@
+@import 'src/sass/variables';
+
 #container {
     // background-color: #fff;
     // padding: 50px 100px;
@@ -18,10 +20,6 @@ img {
     text-align: center;
 }
 
-// .carousel-inner:focus {
-//     outline: none !important;
-// }
-
 .flex-slide {
     text-align: center;
     display: flex;
@@ -29,6 +27,5 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 50px;
-    // background-color: green;
+//     padding: $globalSidesPadding;
 }

@@ -2,7 +2,6 @@
 
 .section {
     margin-bottom: 200px;
-    // background-color: #f8f8f9;
     min-height: calc(100vh - #{$navbarHeight});
     display: flex;
     justify-content: center;
@@ -13,16 +12,6 @@
     margin-bottom: 0px;
     height: 100vh;
     background-color: transparent;
-}
-
-.flex-box {
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
-    // justify-content: space-around;
-    // img {
-    //     width: 60%;
-    // }
 }
 
 .card {
