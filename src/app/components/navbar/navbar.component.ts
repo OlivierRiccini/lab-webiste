@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { GlobalConfigService } from 'src/app/services/global-config.service';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
 import { NavigationService } from 'src/app/services/navigation.service';
 
@@ -11,14 +11,13 @@ import { NavigationService } from 'src/app/services/navigation.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnDestroy {
+export class NavbarComponent {
   public imgUrl: string;
   public currentLang: { value: string, label: string };
   public availableLanguages = environment.languages;
-  public currentTheme: Theme;
+  public theme$: Observable<Theme>;
   public Theme = Theme;
   public isSideBarOpen = false;
-  private subscription = new Subscription();
 
   constructor(
     public translateService: TranslateService,
@@ -31,11 +30,7 @@ export class NavbarComponent implements OnDestroy {
     this.currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
     this.translateService.addLangs(langValues);
     this.translateService.setDefaultLang(defaultLang);
-    this.handleThemeChanges();
-  }
-
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.theme$ = this.globalConfigService.theme$;
   }
 
   public onSwitchLang(langValue: string): void {
@@ -54,13 +49,5 @@ export class NavbarComponent implements OnDestroy {
   public onToggleSideNav(): void {
     this.isSideBarOpen = !this.isSideBarOpen;
   }
-
-  private handleThemeChanges(): void {
-    const subscription = this.globalConfigService.theme$.subscribe(theme => {
-      this.currentTheme = theme;
-    });
-    this.subscription.add(subscription);
-  }
-
 
 }

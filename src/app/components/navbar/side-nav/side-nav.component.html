@@ -1,4 +1,9 @@
-<div id="sidebar-wrapper" [ngClass]="open ? 'open' : 'close'">
+<div id="sidebar-wrapper" [ngClass]="{
+    'open': open,
+    'close': !open,
+    'light-nav': (theme$ | async) === Theme.LIGHT,
+    'dark-nav': (theme$ | async) === Theme.DARK
+    }">
     <nav>
         <ul>
             <li>
@@ -14,7 +19,7 @@
                 <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
             </li>
             <li>
-                <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
+                <div id="languages" ngbDropdown display="dynamic">
                     <a ngbDropdownToggle>
                         {{ currentLang.label | titlecase }}
                     </a>

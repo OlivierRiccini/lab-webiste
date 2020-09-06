@@ -24,12 +24,20 @@
     #logo {
         background-image: url('../../../assets/images/white_logo_transparent_background.png');
     }
+    #sidebar-toggler {
+        color: #fff;;
+        border-color: #fff;
+    }
 }
 
 .light-nav {
     background: $lightGrey;
     #logo {
         background-image: url('../../../assets/images/logo_transparent_background.png');
+    }
+    #sidebar-toggler {
+        color: $darkGrey;
+        border-color:  $darkGrey;
     }
 }
 
@@ -55,10 +63,9 @@ app-top-nav {
     z-index: 1;
     height: 45px;
     width: 45px;
-    border: 1px solid $darkGrey;
+    border: 1px solid;
     border-radius: 50%;
-    color: $darkGrey;
-    transition: all .5s;
+    transition: transform .5s;
     align-items: center;
     justify-content: center;
 

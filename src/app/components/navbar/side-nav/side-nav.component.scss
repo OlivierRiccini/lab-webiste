@@ -1,7 +1,7 @@
 @import 'src/sass/variables';
 
 #sidebar-wrapper {
-    background-color: $grey;
+    // background-color: $grey;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -9,6 +9,14 @@
     padding: 90px 20px;
     transition: .5s;
     font-size: 1rem;
+}
+
+#sidebar-wrapper.light-nav {
+    background-color: $grey;
+}
+
+#sidebar-wrapper.dark-nav {
+    background-color: $blueGrey;
 }
 
 .close {
@@ -23,5 +31,11 @@ nav {
     ul {
         list-style: none;
         line-height: 3.5;
+    }
+}
+
+#languages {
+    a, span {
+        cursor: pointer;
     }
 }

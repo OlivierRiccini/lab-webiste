@@ -1,7 +1,7 @@
-<div class="flex-container">
+<div class="flex-container" [ngClass]="theme === Theme.LIGHT ? 'light-nav': 'dark-nav'">
     <div class="content" data-aos="fade-down" data-aos-delay="250">
         <p data-aos="fade-down" data-aos-delay="500" [innerHTML]="'headline' | translate">
         </p>
-        <button data-aos="fade-down" data-aos-delay="750">{{ 'contact-button' | translate }}</button>
+        <button data-aos="fade-down" data-aos-delay="750" (click)="onScroll('#contact')">{{ 'contact-button' | translate }}</button>
     </div>
 </div>
