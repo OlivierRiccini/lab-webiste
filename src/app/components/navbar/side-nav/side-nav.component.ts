@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavbarComponent } from '../navbar.component';
 import { TranslateService } from '@ngx-translate/core';
 import { GlobalConfigService } from 'src/app/services/global-config.service';
@@ -10,7 +10,7 @@ import { NavigationService } from 'src/app/services/navigation.service';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent extends NavbarComponent implements OnInit {
-  public open = false;
+  @Input() public open: boolean;
 
   constructor(
     public translateService: TranslateService,
@@ -22,10 +22,6 @@ export class SideNavComponent extends NavbarComponent implements OnInit {
 
 
   ngOnInit(): void {
-  }
-
-  public onToggleSideNav(): void {
-    this.open = !this.open;
   }
 
 }

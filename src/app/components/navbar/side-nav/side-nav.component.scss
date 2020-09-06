@@ -5,17 +5,10 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 300px;
-    padding: 20px;
+    width: 350px;
+    padding: 90px 20px;
     transition: .5s;
     font-size: 1rem;
-}
-
-#sidebar-toggler {
-    position: absolute;
-    width: 100px;
-    left: -100px;
-    cursor: pointer;
 }
 
 .close {
@@ -23,7 +16,7 @@
 }
 
 .open {
-    left: calc(100vw - 300px);
+    left: calc(100vw - 350px);
 }
 
 nav {

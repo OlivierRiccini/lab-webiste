@@ -17,6 +17,7 @@ export class NavbarComponent implements OnDestroy {
   public availableLanguages = environment.languages;
   public currentTheme: Theme;
   public Theme = Theme;
+  public isSideBarOpen = false;
   private subscription = new Subscription();
 
   constructor(
@@ -48,6 +49,10 @@ export class NavbarComponent implements OnDestroy {
 
   public onScroll(target: string): void {
     this.navigationService.scrollTo(target);
+  }
+
+  public onToggleSideNav(): void {
+    this.isSideBarOpen = !this.isSideBarOpen;
   }
 
   private handleThemeChanges(): void {
