@@ -11,21 +11,30 @@
     height: 80px;
 }
 
+#logo {
+    width: 280px;
+    height: 75px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .dark-nav {
     background: $darkBlue;
+    #logo {
+        background-image: url('../../../assets/images/white_logo_transparent_background.png');
+    }
 }
 
 .light-nav {
     background: $lightGrey;
+    #logo {
+        background-image: url('../../../assets/images/logo_transparent_background.png');
+    }
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-}
-
-img {
-    width: 280px;
 }
 
 app-side-nav {
@@ -43,21 +52,16 @@ app-top-nav {
     app-top-nav {
         display: none;
     }
-    img {
-        width: 220px;
-    }
 }
 
 @media screen and (max-width: 700px) {
-    img {
-        width: 180px;
+    #logo {
+        width: 75px;
+        background-position-x: right;
     }
 }
 
 @media screen and (max-width: 500px) {
-    img {
-        width: 150px;
-    }
     .flex-nav {
         padding: 0px 5px;
     }
@@ -72,7 +76,7 @@ label {
         box-shadow: 0 6.4px 11.2px 0 rgba(darken($darkBlue, 12%), 0.12);
       }
       &:checked + .toggle-wrapper > .selector {
-        left: calc(100% - 25px);
+        left: calc(100% - 20px);
         background-color: $darkBlue;
       }
       &:checked ~ .notification > .selected:before {
@@ -80,26 +84,26 @@ label {
       }
     }
     .toggle-wrapper {
-      position: relative;
-      width: 48px;
-      height: 24px;
-      background-color: #eaeaea;
-      border-radius: 999px;
-      margin: auto;
-      cursor: pointer;
-      pointer-events: all;
-      box-shadow: 0 6.4px 11.2px 0 rgba(darken($darkGrey, 12%), 0.12);
-      .selector {
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        top: 50%;
-        left: 4px;
-        transform: translateY(-50%);
-        background-color: $darkGrey;
-        transition: left 0.25s ease;
-        border-radius: 50%;
-      }
+        position: relative;
+        width: 48px;
+        height: 24px;
+        background-color: #eaeaea;
+        border-radius: 999px;
+        margin-right: 15px;
+        cursor: pointer;
+        pointer-events: all;
+        box-shadow: 0 6.4px 11.2px 0 rgba(darken($darkGrey, 12%), 0.12);
+        .selector {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            background-color: $darkGrey;
+            transition: left 0.25s ease;
+            border-radius: 50%;
+        } 
     }
 }
   

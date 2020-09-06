@@ -53,7 +53,6 @@ export class NavbarComponent implements OnDestroy {
   private handleThemeChanges(): void {
     const subscription = this.globalConfigService.theme$.subscribe(theme => {
       this.currentTheme = theme;
-      this.imgUrl = theme === Theme.LIGHT ? '../../../assets/images/logo_transparent_background.png' : '../../../assets/images/white_logo_transparent_background.png';
     });
     this.subscription.add(subscription);
   }
