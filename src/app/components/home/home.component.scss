@@ -2,7 +2,8 @@
 
 .section {
     margin-bottom: 200px;
-    min-height: calc(100vh - #{$navbarHeight});
+    min-height: calc(100vh);
+    //min-height: calc(100vh - #{$navbarHeight});
     display: flex;
     //justify-content: center;
     align-items: center;

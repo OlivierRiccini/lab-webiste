@@ -42,7 +42,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.pageScrollService.scroll({
       document: this.document,
       scrollInView: true,
-      scrollTarget: target
+      scrollTarget: target,
+      scrollOffset: 80
     });
   }
 
