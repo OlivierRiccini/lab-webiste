@@ -14,7 +14,6 @@ import { Theme } from 'src/app/models/theme';
 export class SideNavComponent extends NavbarComponent implements OnInit {
   @Input() public open: boolean;
   public theme$: Observable<Theme>;
-  public isCollapsed = false;
 
   constructor(
     public translateService: TranslateService,
@@ -24,7 +23,6 @@ export class SideNavComponent extends NavbarComponent implements OnInit {
     super(translateService, globalConfigService, navigationService);
     this.theme$ = this.globalConfigService.theme$;
   }
-
 
   ngOnInit(): void {
   }

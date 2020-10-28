@@ -153,3 +153,24 @@ ul {
         padding: $globalSidesPaddingSmall;
     }
 }
+
+.survey-row {
+    z-index: 999;
+    position: fixed;
+    top: $navbarHeight;
+    height: $navbarHeight;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $contrastYellow;
+    p {
+        margin-bottom: 0;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+    a, p {
+        padding: 0 20px;
+        color: #fff;
+    }
+} 

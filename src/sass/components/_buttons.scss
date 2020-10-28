@@ -1,0 +1,43 @@
+.btn-orange, .btn-white {
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0;
+    cursor: pointer !important;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none !important;
+    &:hover {
+        position: relative;
+        top: -2px;
+    }
+}
+
+.btn-orange {
+    background: $contrastYellow;
+    color: #fff !important;
+}
+
+.btn-white {
+    background: $white;
+    color: $contrastYellow !important;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    width: 70px;
+    height: 30px;
+}
+
+.btn-medium {
+    padding: 10px 20px;
+    width: 100px;
+    height: 50px;
+}
+
+.btn-large {
+    padding: 20px 40px;
+    width: 170px;
+    height: 70px; 
+}
