@@ -5,10 +5,12 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 350px;
+    //width: 350px;
+    width: 100vw;
     padding: 90px 20px;
     transition: .5s;
     font-size: 1rem;
+    z-index: 2;
 }
 
 #sidebar-wrapper.light-nav {
@@ -24,7 +26,8 @@
 }
 
 .open {
-    left: calc(100vw - 350px);
+    //left: calc(100vw - 350px);
+    left: 0;
 }
 
 nav {

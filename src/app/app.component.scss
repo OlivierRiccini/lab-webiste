@@ -6,6 +6,7 @@
     padding: 0 $globalSidesPadding;
     left: 0;
     right: 0;
+    top: calc(#{$navbarHeight} + #{$infoBannerHeight});
 }
 
 .area {
@@ -150,15 +151,15 @@ ul {
 
 @media screen and (max-width: 500px) {
     .context {
-        padding: $globalSidesPaddingSmall;
+        padding: 0 $globalSidesPaddingSmall;
     }
 }
 
 .survey-row {
-    z-index: 999;
+    z-index: 2;
     position: fixed;
     top: $navbarHeight;
-    height: $navbarHeight;
+    height: $infoBannerHeight;
     width: 100%;
     display: flex;
     justify-content: center;
