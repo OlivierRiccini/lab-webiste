@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { GlobalConfigService } from 'src/app/services/global-config.service';
@@ -12,12 +12,14 @@ import { NavigationService } from 'src/app/services/navigation.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  @ViewChild('navbar') navbarElementView: ElementRef;
   public imgUrl: string;
   public currentLang: { value: string, label: string };
   public availableLanguages = environment.languages;
   public theme$: Observable<Theme>;
   public Theme = Theme;
   public isSideBarOpen = false;
+  public hasScrolled = false;
 
   constructor(
     public translateService: TranslateService,
@@ -48,6 +50,15 @@ export class NavbarComponent {
 
   public onToggleSideNav(): void {
     this.isSideBarOpen = !this.isSideBarOpen;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  handleKeyDown(event) {
+    if (this.navbarElementView) {
+      const breakPoint = this.navbarElementView.nativeElement.offsetHeight;
+      console.log('BREAK ', breakPoint);
+      this.hasScrolled = document.body.scrollTop > breakPoint || document.documentElement.scrollTop > breakPoint;
+    }
   }
 
 }

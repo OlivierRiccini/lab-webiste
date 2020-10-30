@@ -16,7 +16,9 @@ export class AppComponent implements OnDestroy {
   public topened = false;
 
   constructor(private globalConfigService: GlobalConfigService) {
-    AOS.init();
+    AOS.init({
+      disable: 'mobile'
+    });
     this.handleThemeChanges();
   }
 

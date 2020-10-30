@@ -9,12 +9,12 @@
     position: fixed;
     width: 100vw;
     padding: 0px $globalSidesPadding;
-    height: 80px;
+    height: $navbarHeight;
 }
 
 #logo {
-    width: 280px;
-    height: 75px;
+    width: $logoWidth;
+    height: $logoHeight;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -32,6 +32,7 @@
 
 .light-nav {
     background: $lightGrey;
+    transition: all .2s !important;
     #logo {
         background-image: url('../../../assets/images/logo_transparent_background.png');
     }
@@ -142,4 +143,25 @@ label {
         } 
     }
 }
-  
+
+
+.survey-row {
+    z-index: 2;
+    position: fixed;
+    top: $navbarHeight;
+    height: $infoBannerHeight;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $contrastYellow;
+    p {
+        margin-bottom: 0;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+    a, p {
+        padding: 0 20px;
+        color: #fff;
+    }
+}
