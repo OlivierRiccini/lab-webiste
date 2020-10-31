@@ -1,24 +1,15 @@
 @import 'src/sass/variables';
 
 #sidebar-wrapper {
-    // background-color: $grey;
     position: fixed;
     top: 0;
     bottom: 0;
-    //width: 350px;
     width: 100vw;
     padding: 90px 20px;
     transition: .5s;
     font-size: 1rem;
     z-index: 2;
-}
-
-#sidebar-wrapper.light-nav {
-    background-color: $grey;
-}
-
-#sidebar-wrapper.dark-nav {
-    background-color: $blueGrey;
+    background-color: $opal;
 }
 
 .close {
@@ -26,7 +17,6 @@
 }
 
 .open {
-    //left: calc(100vw - 350px);
     left: 0;
 }
 

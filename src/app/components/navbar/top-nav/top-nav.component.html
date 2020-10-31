@@ -1,10 +1,10 @@
 <nav>
-    <a (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
+    <a class="nav-item-link" (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
     <!-- <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a> -->
-    <a routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
-    <a (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+    <a class="nav-item-link" routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
+    <a class="nav-item-link" (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
     <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
-        <a ngbDropdownToggle>
+        <a class="nav-item-link" ngbDropdownToggle>
             {{ currentLang.label | titlecase }}
         </a>
         <div ngbDropdownMenu class="dropdown-menu">

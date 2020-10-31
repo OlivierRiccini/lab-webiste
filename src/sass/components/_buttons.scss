@@ -1,4 +1,4 @@
-.btn-orange, .btn-white {
+.btn-gold, .btn-white {
     min-width: fit-content;
     display: flex;
     align-items: center;
@@ -12,16 +12,19 @@
         position: relative;
         top: -2px;
     }
+    &:focus {
+        outline: none;
+    }
 }
 
-.btn-orange {
-    background: $contrastYellow;
+.btn-gold {
+    background: $gold;
     color: #fff !important;
 }
 
 .btn-white {
     background: $white;
-    color: $contrastYellow !important;
+    color: $gold !important;
 }
 
 .btn-small {

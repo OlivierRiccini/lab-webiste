@@ -9,42 +9,16 @@
     position: fixed;
     width: 100vw;
     padding: 0px $globalSidesPadding;
-    height: $navbarHeight;
-}
-
-#logo {
-    width: $logoWidth;
-    height: $logoHeight;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.dark-nav {
-    background: $darkBlue;
-    #logo {
-        background-image: url('../../../assets/images/white_logo_transparent_background.png');
-    }
-    #sidebar-toggler {
-        color: #fff;;
-        border-color: #fff;
-    }
-}
-
-.light-nav {
-    background: $lightGrey;
+    height: $navbar-height;
+    background: $white;
     transition: all .2s !important;
     #logo {
         background-image: url('../../../assets/images/logo_transparent_background.png');
     }
     #sidebar-toggler {
         color: $darkGrey;
-        border-color:  $darkGrey;
+        border-color: $darkGrey;
     }
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
 }
 
 app-side-nav {
@@ -91,70 +65,34 @@ app-top-nav {
     }
 }
 
-@media screen and (max-width: 700px) {
-    #logo {
-        width: 75px;
-        background-position-x: right;
-    }
-}
-
 @media screen and (max-width: 500px) {
     .flex-nav {
         padding: 0px $globalSidesPaddingSmall;
     }
 }
 
-label {
-    pointer-events: none;
-    margin: 0;
-    .input {
-      display: none;
-      &:checked + .toggle-wrapper {
-        box-shadow: 0 6.4px 11.2px 0 rgba(darken($darkBlue, 12%), 0.12);
-      }
-      &:checked + .toggle-wrapper > .selector {
-        left: calc(100% - 20px);
-        background-color: $darkBlue;
-      }
-      &:checked ~ .notification > .selected:before {
-        content: "Yes";
-      }
-    }
-    .toggle-wrapper {
-        position: relative;
-        width: 48px;
-        height: 24px;
-        background-color: #eaeaea;
-        border-radius: 999px;
-        margin-right: 15px;
-        cursor: pointer;
-        pointer-events: all;
-        box-shadow: 0 6.4px 11.2px 0 rgba(darken($darkGrey, 12%), 0.12);
-        .selector {
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 50%;
-            left: 4px;
-            transform: translateY(-50%);
-            background-color: $darkGrey;
-            transition: left 0.25s ease;
-            border-radius: 50%;
-        } 
-    }
+.logo-link {
+    text-decoration: none;
 }
 
+.company-name {
+    font-size: 1.45rem;
+    font-weight: 900;
+    margin: 0;
+    color: $gold;
+}
 
-.survey-row {
+/* .survey-row {
     z-index: 2;
     position: fixed;
-    top: $navbarHeight;
+    top: $navbar-height;
     height: $infoBannerHeight;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $contrastYellow;
+    //background-color: $blue-purple;
+    background-color: $gold;
     p {
         margin-bottom: 0;
         font-weight: bolder;
@@ -162,6 +100,6 @@ label {
     }
     a, p {
         padding: 0 20px;
-        color: #fff;
+        color: $white;
     }
-}
+} */

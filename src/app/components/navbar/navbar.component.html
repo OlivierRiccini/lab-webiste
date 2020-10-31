@@ -4,20 +4,16 @@
     data-aos="fade-down"
     [ngClass]="{
         'flex-nav': true,
-        'light-nav': (theme$ | async) === Theme.LIGHT,
-        'dark-nav': (theme$ | async) !== Theme.LIGHT,
         'shadow': hasScrolled
     }">
-    <div class="logo-container">
-        <!-- <label for="toggle">
-            <input class="input" id="toggle" type="checkbox" (change)="onSwitchTheme()"/>
-            <div class="toggle-wrapper"><span class="selector"></span></div>
-        </label> -->
-    
-        <a (click)="onScroll('#home')" routerLink="" fragment="home">
-            <div id="logo"></div>
-        </a>
-    </div>
+    <!-- <div class="logo-container"> -->
+       <!--  <div class="logo-container"> -->
+            <a  class="logo-link" (click)="onScroll('#home')" routerLink="" fragment="home">
+                <!-- <div id="logo"></div> -->
+                <h1 class="company-name">BLOCKBRAINERS</h1>
+            </a>
+      <!--   </div> -->
+    <!-- </div> -->
     <app-top-nav></app-top-nav>
     <app-side-nav [open]="isSideBarOpen"></app-side-nav>
     
@@ -25,7 +21,8 @@
         <span>&#10011;</span>
     </div>
 </div>
-<div class="survey-row" data-aos="fade-down" data-aos-delay="1000" [ngClass]="{ 'shadow': hasScrolled }">
+<!-- <div class="survey-row" data-aos="fade-down" data-aos-delay="1000" [ngClass]="{ 'shadow': hasScrolled }">
     <p>Please help us improve our services</p>
     <a class="btn-white btn-medium" href="https://forms.gle/8kg7TmopLCgm74oc7" target="_blank">Take the survey</a>
 </div>
+ -->

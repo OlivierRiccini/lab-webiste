@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap');
 @import 'node_modules/aos/src/sass/aos.scss';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import 'src/sass/variables';
@@ -13,9 +13,13 @@ body {
     letter-spacing: 1.5px;
     margin: 0px;
     overflow-x: hidden;
+    color: $prussian-blue;
+    a {
+        color: $prussian-blue;
+    }
 }
 
-.dark-body {
+/* .dark-body {
     color: #fff;
     a {
         color: #fff;
@@ -23,15 +27,17 @@ body {
 }
 
 .light-body {
-    color: $darkGrey;
-    a, span {
-        color: $darkGrey;  
+    // color: $darkGrey;
+    color: $prussian-blue;
+    a, span, h1, h2, h3 {
+        // color: $darkGrey;
+        color: $prussian-blue;
     }
-}
+} */
 
 .page-container {
-    margin-top: $navbarHeight;
-    min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight} - #{$globalSidesPadding});
+    margin-top: $navbar-height;
+    min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$globalSidesPadding});
 }
 
 ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-slide:focus {

@@ -3,7 +3,6 @@ import { NavigationService } from 'src/app/services/navigation.service';
 import { DOCUMENT } from '@angular/common';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { ActivatedRoute } from '@angular/router';
-import { GlobalConfigService } from 'src/app/services/global-config.service';
 import { Observable, Subscription } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
 
@@ -20,11 +19,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     private pageScrollService: PageScrollService,
     @Inject(DOCUMENT) private document: any,
     private route: ActivatedRoute,
-    private navigationService: NavigationService,
-    private globalConfigService: GlobalConfigService
+    private navigationService: NavigationService
     ) {
       this.listenToScroll();
-      this.theme$ = this.globalConfigService.theme$;
   }
 
   public ngOnInit(): void {
@@ -43,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       document: this.document,
       scrollInView: true,
       scrollTarget: target,
-      scrollOffset: 160
+      // scrollOffset: 160
     });
   }
 
@@ -57,12 +54,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
     this.subscription.add(subscription);
   }
-
-  // private handleThemeChanges(): void {
-  //   const subscription = this.globalConfigService.theme$.subscribe(theme => {
-  //     this.theme = theme;
-  //   });
-  //   this.subscription.add(subscription);
-  // }
 
 }

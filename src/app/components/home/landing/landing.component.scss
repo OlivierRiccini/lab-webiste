@@ -1,19 +1,19 @@
 @import 'src/sass/variables';
 
 .flex-container {
-  /*   height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center; */
-
-    //max-width: 810px;
-    max-width: 970px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+        width: 35%;
+    }
 }
 
 .content {
-    width: 80%;
     border-left: 1px solid;
-    padding: 20px 40px;
+    padding: 10px 0 10px 40px;
+    max-width: 50%;
     h2 {
         margin-bottom: 35px;
         font-size: 2.5rem;
@@ -25,17 +25,33 @@
     }
 }
 
-.light-nav {
-    .content {
-        border-color: $darkGrey;
-    }
+.content {
+    border-color: $prussian-blue;
 }
 
-.dark-nav {
-    border-color: #fff;
-}
-
-.btn-orange {
+.btn-gold {
     font-size: 22px;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+    .flex-container {
+          img {
+              display: none;
+          }
+      }
+      .content {
+        border-left: 1px solid;
+        padding: 20px 0 20px 40px;
+        max-width: 100%;
+        h2 {
+            margin-bottom: 35px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+    }
 }

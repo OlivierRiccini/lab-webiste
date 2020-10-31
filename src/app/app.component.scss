@@ -6,7 +6,7 @@
     padding: 0 $globalSidesPadding;
     left: 0;
     right: 0;
-    top: calc(#{$navbarHeight} + #{$infoBannerHeight});
+    top: calc(#{$navbar-height});
 }
 
 .area {
@@ -40,25 +40,14 @@ ul {
     bottom: -150px;
 }
 
-.light-body {
-    .area {
-        background: $lightGrey;
-        background: -webkit-linear-gradient(to left, $lightGrey, $grey); 
-    }
-    .circles li {
-        background: $grey;
-    } 
+.area {
+    background: $white;
+    background: -webkit-linear-gradient(to left, $white, $isabelline); 
 }
 
-.dark-body {
-    .area {
-        background: $darkBlue;
-        background: -webkit-linear-gradient(to left, $blue, $darkBlue);  
-    }
-    .circles li {
-        background: $blueGrey;
-    } 
-}
+.circles li {
+    background: $isabelline;
+} 
 
 .circles li:nth-child(1) {
     left: 25%;
@@ -66,7 +55,6 @@ ul {
     height: 80px;
     animation-delay: 0s;
 }
-
 
 .circles li:nth-child(2) {
     left: 10%;
@@ -155,23 +143,3 @@ ul {
     }
 }
 
-.survey-row {
-    z-index: 2;
-    position: fixed;
-    top: $navbarHeight;
-    height: $infoBannerHeight;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $contrastYellow;
-    p {
-        margin-bottom: 0;
-        font-weight: bolder;
-        font-size: 1.2rem;
-    }
-    a, p {
-        padding: 0 20px;
-        color: #fff;
-    }
-}

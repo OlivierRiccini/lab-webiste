@@ -1,22 +1,19 @@
-
-<div [ngClass]="currentTheme === Theme.LIGHT ? 'light-body': 'dark-body'">
-  <app-navbar></app-navbar>
-  <div class="context">
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </div>
-  <div class="area">
-    <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
+<app-navbar></app-navbar>
+<div class="context">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>

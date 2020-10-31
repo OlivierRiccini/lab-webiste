@@ -1,7 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
-import { GlobalConfigService } from 'src/app/services/global-config.service';
 import { Observable } from 'rxjs';
 import { Theme } from 'src/app/models/theme';
 import { NavigationService } from 'src/app/services/navigation.service';
@@ -23,7 +22,6 @@ export class NavbarComponent {
 
   constructor(
     public translateService: TranslateService,
-    public globalConfigService: GlobalConfigService,
     public navigationService: NavigationService
     ) {
     const browserLang = this.translateService.getBrowserLang().toLowerCase();
@@ -32,16 +30,11 @@ export class NavbarComponent {
     this.currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
     this.translateService.addLangs(langValues);
     this.translateService.setDefaultLang(defaultLang);
-    this.theme$ = this.globalConfigService.theme$;
   }
 
   public onSwitchLang(langValue: string): void {
     this.translateService.use(langValue);
     this.currentLang = this.availableLanguages.find(lang => lang.value === langValue);
-  }
-
-  public onSwitchTheme(): void {
-    this.globalConfigService.switchTheme();
   }
 
   public onScroll(target: string): void {
@@ -56,7 +49,6 @@ export class NavbarComponent {
   handleKeyDown(event) {
     if (this.navbarElementView) {
       const breakPoint = this.navbarElementView.nativeElement.offsetHeight;
-      console.log('BREAK ', breakPoint);
       this.hasScrolled = document.body.scrollTop > breakPoint || document.documentElement.scrollTop > breakPoint;
     }
   }

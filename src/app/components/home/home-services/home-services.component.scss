@@ -1,15 +1,10 @@
-#container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+@import 'src/sass/variables';
 
-    ul {
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-        padding: 0;
-    }
-    img {
-        width: 30%;
-    }
+.card-wrapper {
+    padding: 20px;
+}
+
+.card-content {
+    padding-left: 20px;
+    border-left: 1px solid $prussian-blue;
 }

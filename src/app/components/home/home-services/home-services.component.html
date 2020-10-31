@@ -1,12 +1,11 @@
 <h2>Our Services</h2>
 <div id="container">
-    <ul>
-        <li>DApp design and development</li>
-        <li>Enterprise Blockchain consulting and integration</li>
-        <li>Token implementation</li>
-        <li>Crypto wallet integration</li>
-        <li>Smart contract development</li>
-        <li>Lab continuous Blockchain research</li>
-    </ul>
-    <img src="../../../assets/svg/blockchain.svg" alt="">
+    <div class="row">
+        <div class="col-sm-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let service of services">
+            <div class="card-content">
+                <b>{{ 'services.' + service + '.headline' | translate }}</b>
+                <p>{{ 'services.' + service + '.text' | translate }}</p>
+            </div>
+        </div>
+    </div>
 </div>

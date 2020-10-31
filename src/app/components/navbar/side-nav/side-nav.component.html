@@ -1,9 +1,4 @@
-<div id="sidebar-wrapper" [ngClass]="{
-    'open': open,
-    'close': !open,
-    'light-nav': (theme$ | async) === Theme.LIGHT,
-    'dark-nav': (theme$ | async) === Theme.DARK
-    }">
+<div id="sidebar-wrapper" [ngClass]="open ? 'open' : 'close'">
     <nav>
         <ul>
             <li>

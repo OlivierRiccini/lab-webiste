@@ -41,5 +41,35 @@
             },
             "send": "send"
         }
+    },
+    "services": {
+        "dapp": {
+            "headline": "DApp design and development",
+            "text": "At Blockbrainers, we really beleive in a fully decentralized world. Blockbrainers designs and implements Decentrlized Applications running on Ethereum, EOS, or Hyperledger."
+        },
+        "smartcontracts": {
+            "headline": "Smart contract development",
+            "text": "At Blockbrainers, we design, develop and deploy smart contracts to Ethereum or EOS Blockchain written in Solidity and C++."
+        },
+        "crytpowallets": {
+            "headline": "Crypto wallet integration",
+            "text": "At Blockbrainers, we can build fully operational currency wallets and exchanges."
+        },
+        "tokens": {
+            "headline": "Token implementation",
+            "text": "At Blockbrainers, we create top level ERC20 tokens. ERC20, the Ethereum token standard, is a technical standard used for smart contracts on the Ethereum blockchain."
+        },
+        "consulting": {
+            "headline": "Blockchain consulting",
+            "text": "Blockbrainers business analysts will help you define your needs and will propose Blockchain based solutions to improve your business."
+        },
+        "integration": {
+            "headline": "Blockchain integration",
+            "text": "At Blockbrainers, we customize Blockchain solutions to solve problems and create new opportunities for your business."
+        },
+        "training": {
+            "headline": "Blockchain training",
+            "text": "At Blockbrainers, we shared our knoledges. We offer functional or technical training for enterprise."
+        }
     }
 }
