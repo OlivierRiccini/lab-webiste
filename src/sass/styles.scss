@@ -40,6 +40,14 @@ body {
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$globalSidesPadding});
 }
 
+.title-bolder {
+    font-weight: 800;
+}
+
+input, textarea {
+    border-radius: 0px !important;
+}
+
 ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-slide:focus {
     outline: none !important;
 }

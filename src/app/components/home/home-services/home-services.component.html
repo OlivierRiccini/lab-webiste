@@ -1,10 +1,10 @@
-<h2>-- Our Services</h2>
+<h2 class="title-bolder">-- Our Services</h2>
 <br>
 <div id="container">
     <div class="row">
         <div class="col-sm-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let service of services">
             <div class="card-content">
-                <b>{{ 'services.' + service + '.headline' | translate }}</b>
+                <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
                 <p>{{ 'services.' + service + '.text' | translate }}</p>
             </div>
         </div>

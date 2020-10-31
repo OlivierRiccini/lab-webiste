@@ -38,4 +38,14 @@ app-home-services {
         padding: 0 30px;
         color: $white;
     }
-} 
+}
+
+@media screen and (max-width: 500px) {
+    .survey-row {
+        right: $globalSidesPaddingSmall;
+    }
+    #contact {
+        right: $globalSidesPaddingSmall;
+        padding: 100px $globalSidesPaddingSmall;
+    }
+}
