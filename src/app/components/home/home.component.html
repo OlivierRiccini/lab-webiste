@@ -4,14 +4,22 @@
 <div id="services" class="section">
     <app-home-services></app-home-services>
 </div>
-<!-- <div id="work" class="section">
+<!-- <div class="section">
+    div id="work" class="section">
     <app-home-work></app-home-work>
+</div> 
 </div> -->
 <!-- <div class="section">
-         
 </div> -->
-<!-- <div class="section">
-</div> -->
+<div class="survey-row" [ngClass]="{ 'shadow': hasScrolled }">
+    <p>Please help us improve our services</p>
+    <a class="btn-gold btn-medium" href="https://forms.gle/8kg7TmopLCgm74oc7" target="_blank">Take the survey</a>
+</div>
+
+<div id="process" class="section">
+    <app-home-process></app-home-process>
+</div>
+
 <div id="contact" class="section">
     <app-home-contact></app-home-contact>
 </div>

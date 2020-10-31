@@ -20,6 +20,7 @@ import { HomeContactComponent } from './components/home/home-contact/home-contac
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
+import { HomeProcessComponent } from './components/home/home-process/home-process.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SideNavComponent } from './components/navbar/side-nav/side-nav.componen
     ContactFormComponent,
     HomeContactComponent,
     TopNavComponent,
-    SideNavComponent
+    SideNavComponent,
+    HomeProcessComponent
   ],
   imports: [
     BrowserModule,

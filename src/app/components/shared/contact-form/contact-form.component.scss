@@ -1,0 +1,13 @@
+@import 'src/sass/variables';
+
+input, textarea {
+    background: transparent;
+    border: 1px solid $prussian-blue;
+}
+
+input:focus, textarea:focus {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border-color: $prussian-blue;
+}

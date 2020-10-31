@@ -1,0 +1,14 @@
+<h2>-- Our Process</h2>
+<br>
+<div id="container" class="row">
+    <div class="col-xs-12 col-sm-6">
+        <ul>
+            <li *ngFor="let process of processes; let i = index" [ngClass]="{'active': process === selectedProcess}" (click)="onSelectProcess(process)">
+                {{ i + 1 }}. {{ 'processes.' + process + '.headline' | translate }}
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        {{ 'processes.' + selectedProcess + '.text' | translate }}
+    </div>
+</div>

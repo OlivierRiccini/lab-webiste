@@ -8,6 +8,34 @@
     background-color: transparent;
 }
 
+#contact {
+    background-color: $opal;
+    position: relative;
+    width: 100vw;
+    right: $globalSidesPadding;
+    padding: 100px $globalSidesPadding;
+}
+
 app-home-services {
     width: 100%;
 }
+
+.survey-row {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    position: relative;
+    right: $globalSidesPadding;
+    background-color: $prussian-blue;
+    p {
+        margin-bottom: 0;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+    a, p {
+        padding: 0 30px;
+        color: $white;
+    }
+} 
