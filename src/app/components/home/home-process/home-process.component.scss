@@ -16,3 +16,14 @@ li {
         font-weight: 800;
     }
 }
+
+
+@media screen and (max-width: 576px) {
+    ul {
+        border-bottom: 1px solid $prussian-blue;
+        border-right: none;
+    }
+    .col-xs-12:nth-child(2) {
+        padding-top: 25px;
+    }
+}

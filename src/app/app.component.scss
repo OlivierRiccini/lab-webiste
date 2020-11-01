@@ -136,6 +136,12 @@ ul {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .context {
+        padding: 0 $global-sides-padding-medium;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
     .context {

@@ -1,9 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { Theme } from 'src/app/models/theme';
 import { NavigationService } from 'src/app/services/navigation.service';
+import { ILang } from 'src/app/models/lang';
 
 @Component({
   selector: 'app-navbar',
@@ -13,28 +11,17 @@ import { NavigationService } from 'src/app/services/navigation.service';
 export class NavbarComponent {
   @ViewChild('navbar') navbarElementView: ElementRef;
   public imgUrl: string;
-  public currentLang: { value: string, label: string };
-  public availableLanguages = environment.languages;
-  public theme$: Observable<Theme>;
-  public Theme = Theme;
-  public isSideBarOpen = false;
+  public currentLang$: Observable<ILang>;
   public hasScrolled = false;
+  public isSideBarOpen$: Observable<boolean>;
 
-  constructor(
-    public translateService: TranslateService,
-    public navigationService: NavigationService
-    ) {
-    const browserLang = this.translateService.getBrowserLang().toLowerCase();
-    const langValues = this.availableLanguages.map(lang => lang.value);
-    const defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
-    this.currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
-    this.translateService.addLangs(langValues);
-    this.translateService.setDefaultLang(defaultLang);
+  constructor(private navigationService: NavigationService) {
+    this.isSideBarOpen$ = this.navigationService.isSideBarOpen$;
+    this.currentLang$ = this.navigationService.currentLang$;
   }
 
   public onSwitchLang(langValue: string): void {
-    this.translateService.use(langValue);
-    this.currentLang = this.availableLanguages.find(lang => lang.value === langValue);
+    this.navigationService.onSwitchLang(langValue);
   }
 
   public onScroll(target: string): void {
@@ -42,11 +29,11 @@ export class NavbarComponent {
   }
 
   public onToggleSideNav(): void {
-    this.isSideBarOpen = !this.isSideBarOpen;
+    this.navigationService.toggleSideBar();
   }
 
   @HostListener('window:scroll', ['$event'])
-  handleKeyDown(event) {
+  handOnScroll(event) {
     if (this.navbarElementView) {
       const breakPoint = this.navbarElementView.nativeElement.offsetHeight;
       this.hasScrolled = document.body.scrollTop > breakPoint || document.documentElement.scrollTop > breakPoint;

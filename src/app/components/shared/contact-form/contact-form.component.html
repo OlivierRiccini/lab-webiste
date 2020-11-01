@@ -1,6 +1,6 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row">
-        <div class="col-sm-6 form-group">
+        <div class="col-sm-12 col-md-6 form-group">
 
             <div class="form-group">
                 <label for="firstName">{{ 'contact.form.firstName.label' | translate | titlecase }}</label>
@@ -48,19 +48,17 @@
             </div>
 
         </div>
-        <div class="col-sm-6">
-            <div class="col-sm-12 form-group">
-                <label for="message">{{ 'contact.form.message.label' | translate | titlecase }}</label>
-                <textarea
-                    [class.is-invalid]="contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)"
-                    class="form-control"
-                    id="message" 
-                    formControlName="message"
-                    [placeholder]="'contact.form.message.placeholder' | translate"
-                    rows="8"></textarea>
-                <div *ngIf="(contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)) || contactForm.get('message').dirty">
-                    <small *ngIf="contactForm.get('message').errors?.required" class="text-danger">{{ 'contact.form.message.error.required' | translate }}</small>
-                </div>
+        <div class="col-sm-12 col-md-6 form-group">
+            <label for="message">{{ 'contact.form.message.label' | translate | titlecase }}</label>
+            <textarea
+                [class.is-invalid]="contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)"
+                class="form-control"
+                id="message" 
+                formControlName="message"
+                [placeholder]="'contact.form.message.placeholder' | translate"
+                rows="8"></textarea>
+            <div *ngIf="(contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)) || contactForm.get('message').dirty">
+                <small *ngIf="contactForm.get('message').errors?.required" class="text-danger">{{ 'contact.form.message.error.required' | translate }}</small>
             </div>
         </div>
 

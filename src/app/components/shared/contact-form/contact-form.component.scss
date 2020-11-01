@@ -11,3 +11,9 @@ input:focus, textarea:focus {
     box-shadow: none;
     border-color: $prussian-blue;
 }
+
+@media screen and (max-width: 768px) {
+   .btn-gold {
+    width: -webkit-fill-available;
+   }
+}

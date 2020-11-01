@@ -9,9 +9,9 @@
         <h1 class="company-name">BLOCKBRAINERS</h1>
     </a>
     <app-top-nav></app-top-nav>
-    <app-side-nav [open]="isSideBarOpen"></app-side-nav>
+    <app-side-nav></app-side-nav>
     
-    <div id="sidebar-toggler" [ngClass]="{ 'sidenav-open': isSideBarOpen }" (click)="onToggleSideNav()">
+    <div id="sidebar-toggler" [ngClass]="{ 'sidenav-open': (isSideBarOpen$ | async) }" (click)="onToggleSideNav()">
         <span>&#10011;</span>
     </div>
 </div>

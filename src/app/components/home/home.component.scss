@@ -10,9 +10,8 @@
 
 #contact {
     background-color: $opal;
-    position: relative;
     width: 100vw;
-    right: $globalSidesPadding;
+    margin: 0 calc(-#{$globalSidesPadding});
     padding: 100px $globalSidesPadding;
 }
 
@@ -25,27 +24,41 @@ app-home-services {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 125px;
-    position: relative;
-    right: $globalSidesPadding;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 calc(-#{$globalSidesPadding});
     background-color: $prussian-blue;
     p {
         margin-bottom: 0;
         font-weight: bolder;
         font-size: 1.2rem;
+        text-align: center;
     }
     a, p {
-        padding: 0 30px;
+        margin: 10px;
         color: $white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+     }
+    .survey-row {
+        margin: 0 calc(-#{$global-sides-padding-medium});
+    }
+    #contact {
+        padding: 50px $global-sides-padding-medium;
+        margin: 0 calc(-#{$global-sides-padding-medium});
     }
 }
 
 @media screen and (max-width: 500px) {
     .survey-row {
-        right: $globalSidesPaddingSmall;
+        margin: 0 calc(-#{$globalSidesPaddingSmall});
     }
     #contact {
-        right: $globalSidesPaddingSmall;
-        padding: 100px $globalSidesPaddingSmall;
+        padding: 50px $globalSidesPaddingSmall;
+        margin: 0 calc(-#{$globalSidesPaddingSmall});
     }
 }

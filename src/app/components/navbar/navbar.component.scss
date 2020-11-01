@@ -35,7 +35,7 @@ app-top-nav {
 
 #sidebar-toggler {
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     height: 45px;
     width: 45px;
     border: 1px solid;
@@ -62,6 +62,12 @@ app-top-nav {
     }
     app-top-nav {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-nav {
+        padding: 0 $global-sides-padding-medium;
     }
 }
 

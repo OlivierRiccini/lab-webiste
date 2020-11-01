@@ -5,7 +5,7 @@
     <a class="nav-item-link" (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
     <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
         <a class="nav-item-link" ngbDropdownToggle>
-            {{ currentLang.label | titlecase }}
+            {{ (currentLang$ | async)?.label | titlecase }}
         </a>
         <div ngbDropdownMenu class="dropdown-menu">
             <span

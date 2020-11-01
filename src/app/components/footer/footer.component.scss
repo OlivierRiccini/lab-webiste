@@ -8,7 +8,7 @@ footer {
     // position: absolute;
     z-index: 1;
     // background-color: red;
-    margin: 0 calc(0px - #{$globalSidesPadding}) 0 calc(0px - #{$globalSidesPadding});
+    // margin: 0 calc(0px - #{$globalSidesPadding}) 0 calc(0px - #{$globalSidesPadding});
     // top: 100%;
     // width: 100%;
     // position: absolute;
@@ -16,4 +16,7 @@ footer {
     color: $white;
     background-color: $prussian-blue;
     padding: 30px 100px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
 }

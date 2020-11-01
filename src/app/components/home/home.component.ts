@@ -3,8 +3,7 @@ import { NavigationService } from 'src/app/services/navigation.service';
 import { DOCUMENT } from '@angular/common';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
-import { Theme } from 'src/app/models/theme';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,6 @@ import { Theme } from 'src/app/models/theme';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public theme$: Observable<Theme>;
   private subscription = new Subscription();
 
   constructor(
