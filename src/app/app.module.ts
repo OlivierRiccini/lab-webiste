@@ -21,6 +21,7 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
 import { HomeProcessComponent } from './components/home/home-process/home-process.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { HomeProcessComponent } from './components/home/home-process/home-proces
         deps: [HttpClient]
       }
     }),
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
