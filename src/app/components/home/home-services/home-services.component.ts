@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-services.component.scss']
 })
 export class HomeServicesComponent implements OnInit {
-  public services = ['dapp', 'smartcontracts', 'crytpowallets', 'tokens', 'consulting', 'integration', 'training'];
+  public services = ['dapp', 'smartContractDev', 'smartContractAudit', 'digitalAssets', 'cryptoWallet'];
 
   constructor() { }
 

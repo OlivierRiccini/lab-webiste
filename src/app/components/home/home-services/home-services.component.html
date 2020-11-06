@@ -5,7 +5,9 @@
         <div class="col-sm-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let service of services">
             <div class="card-content">
                 <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
-                <p>{{ 'services.' + service + '.text' | translate }}</p>
+                <p>{{ 'services.' + service + '.definition' | translate }}</p>
+                <p>{{ 'services.' + service + '.benefits' | translate }}</p>
+                <p>{{ 'services.' + service + '.description' | translate }}</p>
             </div>
         </div>
     </div>
