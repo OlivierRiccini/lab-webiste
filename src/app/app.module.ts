@@ -22,6 +22,7 @@ import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
 import { HomeProcessComponent } from './components/home/home-process/home-process.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing-img.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeContactComponent,
     TopNavComponent,
     SideNavComponent,
-    HomeProcessComponent
+    HomeProcessComponent,
+    SvgLandingImgComponent
   ],
   imports: [
     BrowserModule,

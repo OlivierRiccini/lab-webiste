@@ -37,7 +37,7 @@ body {
 
 .page-container {
     margin-top: $navbar-height;
-    min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$globalSidesPadding});
+    min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
 }
 
 .title-bolder {

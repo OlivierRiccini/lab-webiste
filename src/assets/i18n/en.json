@@ -47,7 +47,7 @@
             "headline": "DApp Development",
             "definition": "A dencetralized application is an application built on a decentralized network. A DApp is composed of a smart contract and a frontend interface.",
             "benefits": "Main benefits: Privacy, No downtime, Censorship resistant, and Immune to single points of failure",
-            "description": "At Blockbrainers, we really beleive in a fully decentralized world. Blockbrainers designs and implements Decentrlized Applications running on Ethereum, EOS, or Hyperledger."
+            "description": "At Blockbrainers, we really beleive in a fully decentralized world. We design and implement Decentralized Applications running on Ethereum, EOS, or Hyperledger."
         },
         "smartContractDev": {
             "headline": "Smart Contract Development",

@@ -3,7 +3,7 @@
 .context {
     position: absolute;
     z-index: 1;
-    padding: 0 $globalSidesPadding;
+    padding: 0 $global-sides-padding;
     left: 0;
     right: 0;
     top: calc(#{$navbar-height});
@@ -136,6 +136,12 @@ ul {
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .context {
+        padding: 0 $global-sides-padding-xl;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .context {
         padding: 0 $global-sides-padding-medium;
@@ -145,7 +151,7 @@ ul {
 
 @media screen and (max-width: 500px) {
     .context {
-        padding: 0 $globalSidesPaddingSmall;
+        padding: 0 $global-sides-padding-small;
     }
 }
 

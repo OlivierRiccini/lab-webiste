@@ -11,8 +11,8 @@
 #contact {
     background-color: $opal;
     width: 100vw;
-    margin: 0 calc(-#{$globalSidesPadding});
-    padding: 100px $globalSidesPadding;
+    margin: 0 calc(-#{$global-sides-padding});
+    padding: 100px $global-sides-padding;
 }
 
 app-home-services {
@@ -26,7 +26,7 @@ app-home-services {
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    margin: 0 calc(-#{$globalSidesPadding});
+    margin: 0 calc(-#{$global-sides-padding});
     background-color: $prussian-blue;
     p {
         margin-bottom: 0;
@@ -55,10 +55,10 @@ app-home-services {
 
 @media screen and (max-width: 500px) {
     .survey-row {
-        margin: 0 calc(-#{$globalSidesPaddingSmall});
+        margin: 0 calc(-#{$global-sides-padding-small});
     }
     #contact {
-        padding: 50px $globalSidesPaddingSmall;
-        margin: 0 calc(-#{$globalSidesPaddingSmall});
+        padding: 50px $global-sides-padding-small;
+        margin: 0 calc(-#{$global-sides-padding-small});
     }
 }

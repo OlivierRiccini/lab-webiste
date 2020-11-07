@@ -1,0 +1,47 @@
+svg .rect {
+    stroke-dasharray: 500;
+    animation: dash-rect 5s linear;
+    -webkit-animation: dash-rect 5s linear;
+    @keyframes dash-rect {
+        from {
+            stroke-dashoffset: 500;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+    
+    @-webkit-keyframes dash-rect {
+        from {
+            stroke-dashoffset: 500;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+
+svg .line {
+    stroke-dasharray: 80;
+    animation: dash-line 4s linear;
+    -webkit-animation: dash-line 4s linear;
+}
+
+@keyframes dash-line {
+    from {
+        stroke-dashoffset: 80;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes dash-line {
+    from {
+        stroke-dashoffset: 80;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
