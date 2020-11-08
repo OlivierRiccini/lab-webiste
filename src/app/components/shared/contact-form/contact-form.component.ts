@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class ContactFormComponent implements OnInit {
     if (this.contactForm.invalid) {
       return;
     }
-    this.emailService.sendEmail(this.contactForm.value).subscribe(
+    this.emailService.sendEmail(this.contactForm.value).pipe(first()).subscribe(
       res => {
         this.success = `Succeccfully sent! Thanks for your message we'll get back to you asap!`;
         this.contactForm.reset();
