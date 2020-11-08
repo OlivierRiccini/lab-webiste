@@ -5,14 +5,14 @@
             <div class="form-group">
                 <label for="firstName">{{ 'contact.form.firstName.label' | translate | titlecase }}</label>
                 <input
-                    [class.is-invalid]="contactForm.get('firstName').invalid && (contactForm.get('firstName').touched || submitted)"
+                    [class.is-invalid]="contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)"
                     class="form-control"
                     id="firstName"
                     formControlName="firstName"
                     type="text"
                     [placeholder]="'contact.form.firstName.placeholder' | translate">
         
-                <div *ngIf="(contactForm.get('firstName').invalid && (contactForm.get('firstName').touched || submitted)) || contactForm.get('firstName').dirty">
+                <div *ngIf="(contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)) || contactForm.get('firstName').dirty">
                     <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.firstName.error.required' | translate }}</small>
                 </div>
             </div>
@@ -20,14 +20,14 @@
             <div class="form-group">
                 <label for="lastName">{{ 'contact.form.lastName.label' | translate | titlecase }}</label>
                 <input
-                    [class.is-invalid]="contactForm.get('lastName').invalid && (contactForm.get('lastName').touched || submitted)"
+                    [class.is-invalid]="contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)"
                     class="form-control"
                     id="lastName"
                     formControlName="lastName"
                     type="text"
                     [placeholder]="'contact.form.lastName.placeholder' | translate">
         
-                <div *ngIf="(contactForm.get('lastName').invalid && (contactForm.get('lastName').touched || submitted)) || contactForm.get('lastName').dirty">
+                <div *ngIf="(contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)) || contactForm.get('lastName').dirty">
                     <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.lastName.error.required' | translate }}</small>
                 </div>
             </div>
@@ -35,13 +35,13 @@
             <div class="form-group">
                 <label for="from">{{ 'contact.form.email.label' | translate | titlecase }}</label>
                 <input
-                    [class.is-invalid]="contactForm.get('from').invalid && (contactForm.get('from').touched || submitted)" 
+                    [class.is-invalid]="contactForm.get('from').invalid && (contactForm.get('from').touched)" 
                     ype="email"
                     class="form-control"
                     formControlName="from"
                     [placeholder]="'contact.form.email.placeholder' | translate"/>
         
-                <div *ngIf="(contactForm.get('from').invalid && (contactForm.get('from').touched || submitted)) || contactForm.get('from').dirty">
+                <div *ngIf="(contactForm.get('from').invalid && (contactForm.get('from').touched)) || contactForm.get('from').dirty">
                     <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.email.error.required' | translate }}</small>
                     <small *ngIf="contactForm.get('from').errors?.email" class="text-danger">{{ 'contact.form.email.error.invalid' | translate }}</small>
                 </div>
@@ -51,19 +51,19 @@
         <div class="col-sm-12 col-md-12 form-group">
             <label for="message">{{ 'contact.form.message.label' | translate | titlecase }}</label>
             <textarea
-                [class.is-invalid]="contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)"
+                [class.is-invalid]="contactForm.get('message').invalid && (contactForm.get('message').touched)"
                 class="form-control"
                 id="message" 
                 formControlName="message"
                 [placeholder]="'contact.form.message.placeholder' | translate"
                 rows="8"></textarea>
-            <div *ngIf="(contactForm.get('message').invalid && (contactForm.get('message').touched || submitted)) || contactForm.get('message').dirty">
+            <div *ngIf="(contactForm.get('message').invalid && (contactForm.get('message').touched)) || contactForm.get('message').dirty">
                 <small *ngIf="contactForm.get('message').errors?.required" class="text-danger">{{ 'contact.form.message.error.required' | translate }}</small>
             </div>
         </div>
 
     </div>
-    <button type="submit" class="btn-gold btn-medium" [disabled]="submitted || contactForm.invalid || contactForm.intouched">{{ 'contact.form.send' | translate | titlecase }}</button>
+    <button type="submit" class="btn-gold btn-medium" [disabled]="contactForm.invalid || !contactForm.touched">{{ 'contact.form.send' | translate | titlecase }}</button>
 </form>
 
 <div *ngIf="!isSending && error">

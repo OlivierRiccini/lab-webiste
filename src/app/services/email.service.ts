@@ -33,6 +33,6 @@ export class EmailService {
             </div>`,
     };
 
-    return this.http.post(environment.emailerApiUrl, body, { headers, observe: 'response' }).pipe(first(), map(res => res));
+    return this.http.post(environment.emailerApiUrl, body, { headers, observe: 'response' });
   }
 }
