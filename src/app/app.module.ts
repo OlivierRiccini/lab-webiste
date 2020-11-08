@@ -20,9 +20,10 @@ import { HomeContactComponent } from './components/home/home-contact/home-contac
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
-import { HomeProcessComponent } from './components/home/home-process/home-process.component';
+import { HomeProcessComponent } from './components/home/home-about/home-process/home-process.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing-img.component';
+import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing
     TopNavComponent,
     SideNavComponent,
     HomeProcessComponent,
-    SvgLandingImgComponent
+    SvgLandingImgComponent,
+    HomeAboutComponent
   ],
   imports: [
     BrowserModule,

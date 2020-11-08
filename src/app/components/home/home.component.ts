@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       document: this.document,
       scrollInView: true,
       scrollTarget: target,
-      // scrollOffset: 160
+      scrollOffset: 70
     });
   }
 

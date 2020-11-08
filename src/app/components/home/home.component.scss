@@ -1,22 +1,20 @@
 @import 'src/sass/variables';
 
 .section {
-    padding: 100px 0;
+    padding: 70px 0;
  }
 
 .section:nth-child(1) {
     background-color: transparent;
 }
 
-#contact {
-    background-color: $opal;
-    width: 100vw;
+.full-width-section {
     margin: 0 calc(-#{$global-sides-padding});
-    padding: 100px $global-sides-padding;
+    padding: 70px $global-sides-padding;
 }
 
-app-home-services {
-    width: 100%;
+#contact {
+    background-color: $opal;
 }
 
 .survey-row {
@@ -44,21 +42,16 @@ app-home-services {
     .section {
         padding: 50px 0;
      }
-    .survey-row {
-        margin: 0 calc(-#{$global-sides-padding-medium});
-    }
-    #contact {
+    .full-width-section {
         padding: 50px $global-sides-padding-medium;
         margin: 0 calc(-#{$global-sides-padding-medium});
     }
+
 }
 
 @media screen and (max-width: 500px) {
-    .survey-row {
-        margin: 0 calc(-#{$global-sides-padding-small});
-    }
-    #contact {
+    .full-width-section {
         padding: 50px $global-sides-padding-small;
-        margin: 0 calc(-#{$global-sides-padding-small});
+        margin: 0 calc(-#{$global-sides-padding-small})
     }
 }

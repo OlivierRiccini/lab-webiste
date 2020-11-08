@@ -1,3 +1,5 @@
+@import 'src/sass/variables';
+
 nav {
     display: flex;
     align-items: center;
@@ -21,17 +23,17 @@ nav {
     }
     a {
         margin-left: 35px;
-        padding-bottom: 3px;
         cursor: pointer;
     }
     a:hover {
         text-decoration: none;
-        border-bottom: 1px solid #fff;
+        color: $gold;
     }
 }
 
 .active {
-    border-bottom: 1px solid #fff;
+    // border-bottom: 1px solid #fff;
+    color: $gold;
 }
 
 .nav-right {

@@ -5,8 +5,11 @@
 }
 
 .card-content {
-    padding-left: 20px;
+    // padding-left: 20px;
+    padding: 20px;
     border-left: 1px solid $prussian-blue;
+    // border: 1px solid $prussian-blue;
+    background: $white;
 }
 
 @media screen and (max-width: 500px) {

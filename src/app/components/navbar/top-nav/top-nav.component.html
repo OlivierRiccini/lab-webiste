@@ -1,8 +1,8 @@
 <nav>
     <a class="nav-item-link" (click)="onScroll('#services')" routerLink="" fragment="services">{{ 'navbar.services-link' | translate | titlecase }}</a>
-    <!-- <a (click)="onScroll('#work')" routerLink="" fragment="work">{{ 'navbar.work-link' | translate | titlecase }}</a> -->
+    <a class="nav-item-link" (click)="onScroll('#about')" routerLink="" fragment="about">{{ 'navbar.about-link' | translate | titlecase }}</a>
     <a class="nav-item-link" routerLink="careers">{{ 'navbar.careers-link' | translate | titlecase }}</a>
-    <a class="nav-item-link" (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+    <a class="nav-item-link btn-small btn-white" (click)="onScroll('#contact')" routerLink="" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
     <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
         <a class="nav-item-link" ngbDropdownToggle>
             {{ (currentLang$ | async)?.label | titlecase }}

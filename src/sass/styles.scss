@@ -19,22 +19,6 @@ body {
     }
 }
 
-/* .dark-body {
-    color: #fff;
-    a {
-        color: #fff;
-    }
-}
-
-.light-body {
-    // color: $darkGrey;
-    color: $prussian-blue;
-    a, span, h1, h2, h3 {
-        // color: $darkGrey;
-        color: $prussian-blue;
-    }
-} */
-
 .page-container {
     margin-top: $navbar-height;
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
@@ -42,6 +26,11 @@ body {
 
 .title-bolder {
     font-weight: 800;
+    // border-left: 4px solid $prussian-blue;
+    // margin-left: 4px;
+    // padding: 10px;
+    width: fit-content;
+
 }
 
 input, textarea {
