@@ -1,4 +1,4 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<form *ngIf="!isSending && !error && !success" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row">
         <div class="col-sm-12 col-md-12 form-group">
 
@@ -63,6 +63,14 @@
         </div>
 
     </div>
-    
-    <button type="submit" class="btn-gold btn-medium">{{ 'contact.form.send' | translate | titlecase }}</button>
+    <button type="submit" class="btn-gold btn-medium" [disabled]="submitted || contactForm.invalid || contactForm.intouched">{{ 'contact.form.send' | translate | titlecase }}</button>
 </form>
+
+<div *ngIf="!isSending && error">
+    <p>{{ error }}</p>
+    <button class="btn-white btn-medium" (click)="onRetry()">Retry</button>
+</div>
+
+<div *ngIf="!isSending && success">{{ success }}</div>
+
+<app-loader *ngIf="!success && !error && isSending"></app-loader>

@@ -24,6 +24,7 @@ import { HomeProcessComponent } from './components/home/home-about/home-process/
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing-img.component';
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
+import { LoaderComponent } from './components/shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
     SideNavComponent,
     HomeProcessComponent,
     SvgLandingImgComponent,
-    HomeAboutComponent
+    HomeAboutComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

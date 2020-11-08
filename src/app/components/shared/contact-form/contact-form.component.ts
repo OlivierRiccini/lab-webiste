@@ -9,7 +9,9 @@ import { EmailService } from 'src/app/services/email.service';
 })
 export class ContactFormComponent implements OnInit {
   public contactForm: FormGroup;
-  public submitted = false;
+  public isSending = false;
+  public error: string;
+  public success: string;
 
   constructor(private formBuilder: FormBuilder, private emailService: EmailService) { }
 
@@ -18,16 +20,30 @@ export class ContactFormComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    this.submitted = true;
+    this.isSending = true;
     if (this.contactForm.invalid) {
       return;
     }
     this.emailService.sendEmail(this.contactForm.value).subscribe(
-      res => console.log('RES ', res.status),
-      err => console.log('ERR ', err)
-      );
-    console.log(this.contactForm.value);
-    this.resetForm();
+      res => {
+        this.success = `Succeccfully sent! Thanks for your message we'll get back to you asap!`;
+        this.contactForm.reset();
+        this.isSending = false;
+        setTimeout(() => {
+          this.success = undefined;
+        }, 3000);
+      },
+      err => {
+        this.error = 'Something went wrong while sending email. Please click the button down below or use our email address: hello@blockbrainers.com';
+        this.isSending = false;
+      }
+    );
+  }
+
+  public onRetry(): void {
+    this.isSending = false;
+    this.error = undefined;
+    this.success = undefined;
   }
 
   private initForm(): void {
@@ -38,11 +54,5 @@ export class ContactFormComponent implements OnInit {
       message: ['', Validators.required]
     });
   }
-
-  private resetForm(): void {
-    this.submitted = false;
-    this.contactForm.reset();
-  }
-
 
 }
