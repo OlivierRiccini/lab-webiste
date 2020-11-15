@@ -8,10 +8,12 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';import AOS from '
 })
 export class AppComponent {
   title = 'Blockbrainers';
+  public isBrowser = false;
   public topened = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
     if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true;
       AOS.init({
         disable: 'mobile'
       });
