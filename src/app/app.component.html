@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
-<div [ngClass]="{ 'visible': isBrowser, 'main-wrapper': true }">
+<app-navbar [ngClass]="isBrowser ? 'visible' : 'hidden'"></app-navbar>
+<div [ngClass]="{ 'visible': isBrowser, 'hidden': !isBrowser, 'main-wrapper': true }">
+  <p [ngClass]="isBrowser ? 'visible' : 'hidden'">Loading...</p>
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
