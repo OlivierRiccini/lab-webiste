@@ -46,7 +46,7 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     LoaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

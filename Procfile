@@ -1,1 +1,1 @@
-web: npm run start:prod
+"start:heroku":"node dist/server"
