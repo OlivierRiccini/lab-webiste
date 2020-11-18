@@ -26,8 +26,8 @@ export class TranslateInterceptor implements HttpInterceptor {
     // const processLang = process.env.LC_ALL || process.env.LC_MESSAGES || process.env.LANG || process.env.LANGUAGE;
     // const defaultLang = processLang && processLang.includes('fr') ? 'fr' : 'en';
     const defaultLang = 'en';
-
-    if (request.url.startsWith('./assets')) {
+    console.log(request.url.includes('i18n'));
+    if (request.url.startsWith('./assets') && request.url.includes('i18n')) {
       const baseUrl = this.getBaseUrl(this.request);
       request = request.clone({
         url: `${baseUrl}/${request.url.replace('./assets', 'assets').replace('serverLangPlaceholder', defaultLang)}`
