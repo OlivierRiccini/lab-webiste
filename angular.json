@@ -25,6 +25,7 @@
             "aot": true,
             "assets": [
               "src/favicon.png",
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -89,6 +90,7 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.png",
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -141,7 +143,12 @@
               ],
               "sourceMap": false,
               "optimization": true
-            }
+            },
+            "assets": [
+              "src/favicon.png",
+              "src/favicon.ico",
+              "src/assets"
+            ]
           }
         },
         "serve-ssr": {
@@ -153,7 +160,12 @@
           "configurations": {
             "production": {
               "browserTarget": "lab-website:build:production",
-              "serverTarget": "lab-website:server:production"
+              "serverTarget": "lab-website:server:production",
+              "assets": [
+                "favicon.png",
+                "favicon.ico",
+                "assets"
+              ]
             }
           }
         },

@@ -17,15 +17,14 @@ export class TranslateInterceptor implements HttpInterceptor {
 
   getBaseUrl(req: express.Request) {
     const { protocol, hostname } = req;
-    return this.PORT ?
-       `${protocol}://${hostname}:${this.PORT}` :
-       `${protocol}://${hostname}`;
+    return `${protocol}://${hostname}`;
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
     const processLang = process.env.LC_ALL || process.env.LC_MESSAGES || process.env.LANG || process.env.LANGUAGE;
     const defaultLang = processLang && processLang.includes('fr') ? 'fr' : 'en';
-
+    console.log(defaultLang);
+    // const defaultLang = 'en';
     if (request.url.startsWith('./assets')) {
       const baseUrl = this.getBaseUrl(this.request);
       request = request.clone({
