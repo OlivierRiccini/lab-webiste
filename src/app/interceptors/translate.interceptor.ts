@@ -17,9 +17,7 @@ export class TranslateInterceptor implements HttpInterceptor {
 
   getBaseUrl(req: express.Request) {
     const { protocol, hostname } = req;
-    return this.PORT ?
-       `${protocol}://${hostname}:${this.PORT}` :
-       `${protocol}://${hostname}`;
+    return `${protocol}://${hostname}`;
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
