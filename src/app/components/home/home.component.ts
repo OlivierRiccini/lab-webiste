@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private listenToScroll(): void {
-    const subscription = this.navigationService.scroll$.pipe(timeout(2000)).subscribe(target => {
+    const subscription = this.navigationService.scroll$.pipe().subscribe(target => {
       if (target) {
         this.scrollTo(target);
       }

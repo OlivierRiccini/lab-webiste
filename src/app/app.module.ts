@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing-img.component';
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -56,19 +60,14 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
-        deps: [HttpClient]
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient, TransferState]
       }
     }),
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [TransferState],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-// AOT compilation support
-export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}

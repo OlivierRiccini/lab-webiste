@@ -12,8 +12,8 @@ export class AppComponent {
   public topened = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.isBrowser = true;
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
       AOS.init({
         disable: 'mobile'
       });

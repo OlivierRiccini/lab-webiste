@@ -13,8 +13,8 @@
     "serve:ssr": "node dist/lab-website/server/main.js",
     "build:ssr": "ng build --prod && ng run lab-website:server:production",
     "prerender": "ng run lab-website:prerender",
-    "start:heroku":"npm run serve:ssr",
-    "postinstall":"npm run build:ssr"
+    "start:heroku": "npm run serve:ssr",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {

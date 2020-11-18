@@ -4,7 +4,7 @@ import { first } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 import { ILang } from '../models/lang';
 import { environment } from 'src/environments/environment';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -53,6 +53,9 @@ export class NavigationService {
       this.currentLang$ = this.currentLang.asObservable();
       this.translateService.addLangs(langValues);
       this.translateService.setDefaultLang(defaultLang);
+    } else {
+      this.translateService.addLangs(langValues);
+      this.translateService.setDefaultLang('serverLangPlaceholder');
     }
   }
 

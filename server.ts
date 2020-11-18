@@ -24,6 +24,7 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { enableProdMode } from '@angular/core';
+import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 enableProdMode();
 
@@ -50,7 +51,8 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    res.render(indexHtml, { req, providers: [{ provide: REQUEST, useValue: req }] });
+    // res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req }] });
   });
 
   return server;
