@@ -162,8 +162,8 @@
               "browserTarget": "lab-website:build:production",
               "serverTarget": "lab-website:server:production",
               "assets": [
-                "src/favicon.png",
-                "src/favicon.ico",
+                "./favicon.png",
+                "./favicon.ico",
                 "./assets"
               ]
             }
