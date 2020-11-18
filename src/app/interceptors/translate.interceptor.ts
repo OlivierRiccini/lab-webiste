@@ -24,7 +24,7 @@ export class TranslateInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
     const processLang = process.env.LC_ALL || process.env.LC_MESSAGES || process.env.LANG || process.env.LANGUAGE;
-    let defaultLang = processLang.split('_')[0] ? processLang.split('_')[0] : 'en';
+    let defaultLang = processLang && processLang.length > 0 && processLang.split('_')[0] ? processLang.split('_')[0] : 'en';
     const availableLangs = environment.languages.map(lang => lang.value);
     defaultLang = availableLangs.includes(defaultLang) ? defaultLang : 'en';
 
