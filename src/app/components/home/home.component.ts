@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -12,20 +13,24 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private subscription = new Subscription();
+  private pageScrollService: PageScrollService;
 
   constructor(
-    private pageScrollService: PageScrollService,
     @Inject(DOCUMENT) private document: any,
+    @Inject(PLATFORM_ID) private platformId: any,
     private route: ActivatedRoute,
     private navigationService: NavigationService
     ) {
-      this.listenToScroll();
+      if (isPlatformBrowser(this.platformId)) {
+        this.pageScrollService = new PageScrollService({scrollInView: true});
+        this.listenToScroll();
+      }
   }
 
   public ngOnInit(): void {
     if (this.route.snapshot.fragment) {
       const target = '#' + this.route.snapshot.fragment;
-      this.scrollTo(target);
+      this.navigationService.scrollTo(target);
     }
   }
 
@@ -43,12 +48,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private listenToScroll(): void {
-    const subscription = this.navigationService.scroll$.subscribe(target => {
-      setTimeout(() => {
-        if (target) {
-          this.scrollTo(target);
-        }
-      }, 100);
+    const subscription = this.navigationService.scroll$.pipe().subscribe(target => {
+      if (target) {
+        this.scrollTo(target);
+      }
     });
     this.subscription.add(subscription);
   }

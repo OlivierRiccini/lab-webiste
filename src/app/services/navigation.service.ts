@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 import { ILang } from '../models/lang';
 import { environment } from 'src/environments/environment';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class NavigationService {
   private currentLang: BehaviorSubject<ILang>;
   public currentLang$: Observable<ILang>;
 
-  constructor(private translateService: TranslateService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: any, private translateService: TranslateService) {
     this.initLang();
     this.scroll = new BehaviorSubject(null);
     this.scroll$ = this.scroll.asObservable();
@@ -41,14 +42,21 @@ export class NavigationService {
   }
 
   private initLang(): void {
-    const browserLang = this.translateService.getBrowserLang().toLowerCase();
+    let defaultLang: string;
     const langValues = this.availableLanguages.map(lang => lang.value);
-    const defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
-    const currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
-    this.currentLang = new BehaviorSubject(currentLang);
-    this.currentLang$ = this.currentLang.asObservable();
-    this.translateService.addLangs(langValues);
-    this.translateService.setDefaultLang(defaultLang);
+
+    if (isPlatformBrowser(this.platformId)) {
+      const browserLang = this.translateService.getBrowserLang().toLowerCase();
+      defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
+      const currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
+      this.currentLang = new BehaviorSubject(currentLang);
+      this.currentLang$ = this.currentLang.asObservable();
+      this.translateService.addLangs(langValues);
+      this.translateService.setDefaultLang(defaultLang);
+    } else {
+      this.translateService.addLangs(langValues);
+      this.translateService.setDefaultLang('serverLangPlaceholder');
+    }
   }
 
 }
