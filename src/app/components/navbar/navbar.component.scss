@@ -34,8 +34,8 @@ app-top-nav {
 #sidebar-toggler {
     cursor: pointer;
     z-index: 2;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     border: 1px solid;
     border-radius: 50%;
     transition: transform .5s;
@@ -43,7 +43,7 @@ app-top-nav {
     justify-content: center;
 
     span {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -83,6 +83,12 @@ app-top-nav {
 
 .logo-link {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    img {
+        height: 32px;
+        margin-right: 10px;
+    }
 }
 
 .company-name {
