@@ -20,7 +20,7 @@ body {
 }
 
 .page-container {
-    margin-top: $navbar-height;
+    padding: $navbar-height 0;
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
 }
 
