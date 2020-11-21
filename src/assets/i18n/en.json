@@ -6,8 +6,9 @@
         "about-link": "about",
         "contact-link": "contact"
     },
-    "headline": "DON'T MISS THE <b>BLOCKCHAIN</b> REVOLUTION!",
-    "description": "At Blockbrainers we assist companies and entrepreneurs in their <b>Blockchain</b> transition.",
+    "title": "DON'T MISS THE <b>BLOCKCHAIN</b> REVOLUTION!",
+    "headline": "At Blockbrainers, we're here to build your next big project with <b>Blockchain Technology</b>.",
+    "description": "We are a team of <b>Blockchain experts</b>, especially in Decentralized Application and smart contracts development, digital assets management, blockchain architecture, integration, and analysis.",
     "contact-button": "Let's talk",
     "contact": {
         "form": {
@@ -46,6 +47,7 @@
     "services": {
         "dapp": {
             "headline": "DApp Development",
+            "icon": "../images/services/dapp",
             "definition": "A dencetralized application is an application built on a decentralized network. A DApp is composed of a smart contract and a frontend interface.",
             "benefits": "Main benefits: Privacy, No downtime, Censorship resistant, and Immune to single points of failure",
             "description": "At Blockbrainers, we really beleive in a fully decentralized world. We design and implement Decentralized Applications running on Ethereum, EOS, or Hyperledger."

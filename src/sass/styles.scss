@@ -7,6 +7,16 @@
 @import 'src/sass/variables';
 @import '../sass/components/buttons';
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 body {
     font-family: 'Raleway', 'Helvetica', sans-serif;
     font-weight: 300;
@@ -27,7 +37,10 @@ body {
 .title-bolder {
     font-weight: 800;
     width: fit-content;
+}
 
+.text-lighter {
+    font-weight: 100;
 }
 
 input, textarea {

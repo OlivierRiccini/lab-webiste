@@ -13,10 +13,6 @@
     padding: 70px $global-sides-padding;
 }
 
-#contact {
-    background-color: $opal;
-}
-
 .survey-row {
     width: 100vw;
     display: flex;
@@ -50,6 +46,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .section {
+        padding: 0px 0;
+     }
     .full-width-section {
         padding: 50px $global-sides-padding-small;
         margin: 0 calc(-#{$global-sides-padding-small})

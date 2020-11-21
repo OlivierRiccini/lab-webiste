@@ -32,6 +32,9 @@
     font-weight: bolder;
 }
 
-#contact {
-    background-color: $opal;
+@media screen and (max-width: 500px) {
+    .contact-section {
+        border-left: none;
+        padding-left: 0;
+    }
 }

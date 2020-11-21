@@ -16,7 +16,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeServicesComponent } from './components/home/home-services/home-services.component';
 import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeContactComponent } from './components/footer/home-contact/home-contact.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
@@ -27,6 +26,8 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeContactComponent } from './components/shared/home-contact/home-contact.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,7 +52,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomeAboutComponent,
     LoaderComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
