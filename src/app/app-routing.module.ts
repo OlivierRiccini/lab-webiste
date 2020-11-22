@@ -5,12 +5,13 @@ import { CareersComponent } from './components/careers/careers.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FragmentGuard } from './guards/fragment.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'services', component: ServicesComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'careers', component: CareersComponent },
+  { path: '', canActivate: [FragmentGuard], component: HomeComponent, pathMatch: 'full' },
+  { path: 'services', canActivate: [FragmentGuard], component: ServicesComponent },
+  { path: 'about', canActivate: [FragmentGuard], component: AboutComponent },
+  { path: 'careers', canActivate: [FragmentGuard], component: CareersComponent },
   { path: 'contact', component: ContactComponent }
 ];
 

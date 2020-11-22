@@ -2,8 +2,9 @@
     <a class="nav-item-link" routerLink="services" routerLinkActive="active-link">{{ 'navbar.services-link' | translate | titlecase }}</a>
     <a class="nav-item-link" routerLink="about" routerLinkActive="active-link">{{ 'navbar.about-link' | translate | titlecase }}</a>
     <a class="nav-item-link" routerLink="careers" routerLinkActive="active-link">{{ 'navbar.careers-link' | translate | titlecase }}</a>
-    <a class="nav-item-link btn-small btn-white" routerLink="contact" routerLinkActive="active-link">{{ 'navbar.contact-link' | translate | titlecase }}</a>
-    <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
+    <!-- <a class="nav-item-link btn-small btn-white" routerLink="contact" routerLinkActive="active-link">{{ 'navbar.contact-link' | translate | titlecase }}</a> -->
+    <a class="nav-item-link btn-small btn-white" [routerLink]="" (click)="onScroll('#contact')" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
+    <!-- <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
         <a class="nav-item-link" ngbDropdownToggle>
             {{ (currentLang$ | async)?.label | titlecase }}
         </a>
@@ -14,5 +15,5 @@
                 {{ availableLang.label | titlecase }}
             </span>
         </div>
-    </div>
+    </div> -->
 </nav>
