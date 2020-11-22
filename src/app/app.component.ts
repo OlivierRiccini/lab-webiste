@@ -1,12 +1,13 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';import AOS from 'aos';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Blockbrainers';
   public isBrowser = false;
   public topened = false;
@@ -18,6 +19,9 @@ export class AppComponent {
         disable: 'mobile'
       });
     }
+  }
+
+  public ngOnInit(): void {
   }
 
 }
