@@ -1,0 +1,29 @@
+@import 'src/sass/variables';
+
+.wrapper {
+    padding: 35px $global-sides-padding;
+    margin: 0 calc(-#{$global-sides-padding});
+    background-color: $opal;
+}
+
+.contact-section-title {
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin: 0 calc(-#{$global-sides-padding-medium});
+        padding: 50px $global-sides-padding-medium;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        margin: 0 calc(-#{$global-sides-padding-small});
+        padding: 50px $global-sides-padding-small;
+    }
+    .contact-section {
+        border-left: none;
+        padding-left: 0;
+    }
+}

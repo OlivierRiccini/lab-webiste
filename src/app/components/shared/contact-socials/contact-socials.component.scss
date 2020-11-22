@@ -1,12 +1,5 @@
 @import 'src/sass/variables';
 
-.contact-section {
-    margin: 35px 0;
-    padding-left: 15px;
-    border-left: 1px solid $prussian-blue;
-    width: fit-content;
-}
-
 .socials {
     a {
         padding: 10px;
@@ -28,13 +21,21 @@
     }
 }
 
-.contact-section-title {
-    font-weight: bolder;
+.contact-section {
+    margin: 35px 0;
+    width: fit-content;
 }
 
-@media screen and (max-width: 500px) {
+.position-left {
     .contact-section {
-        border-left: none;
-        padding-left: 0;
+        padding-left: 15px;
+        border-left: 1px solid $prussian-blue;
+    }
+}
+
+.position-right {
+    .contact-section {
+        padding-right: 15px;
+        border-right: 1px solid $prussian-blue;
     }
 }

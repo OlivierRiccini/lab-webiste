@@ -14,7 +14,6 @@ import { CareersComponent } from './components/careers/careers.component';
 import { HomeWorkComponent } from './components/home/home-work/home-work.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeServicesComponent } from './components/home/home-services/home-services.component';
-import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
@@ -27,7 +26,9 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { HomeContactComponent } from './components/shared/home-contact/home-contact.component';
+import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
+import { ContactSocialsComponent } from './components/shared/contact-socials/contact-socials.component';
+import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,7 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     HomeServicesComponent,
     ContactFormComponent,
-    HomeContactComponent,
+    ContactSectionComponent,
     TopNavComponent,
     SideNavComponent,
     HomeProcessComponent,
@@ -53,7 +54,8 @@ export function createTranslateLoader(http: HttpClient) {
     LoaderComponent,
     AboutComponent,
     ServicesComponent,
-    ContactComponent
+    ContactComponent,
+    ContactSocialsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

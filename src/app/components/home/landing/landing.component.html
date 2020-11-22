@@ -1,9 +1,9 @@
 <div class="flex-container">
     <div class="content" data-aos="fade-down" data-aos-delay="250">
-        <h2 data-aos="fade-down" data-aos-delay="500" [innerHTML]="'title' | translate"></h2>
-        <p data-aos="fade-down" data-aos-delay="750" [innerHTML]="'headline' | translate">
+        <h1 data-aos="fade-down" data-aos-delay="500" [innerHTML]="'title' | translate"></h1>
+        <p class="text-larger" data-aos="fade-down" data-aos-delay="750" [innerHTML]="'headline' | translate">
         </p>
-        <p class="text-lighter text-smaller" data-aos="fade-down" data-aos-delay="900" [innerHTML]="'description' | translate">
+        <p data-aos="fade-down" data-aos-delay="900" [innerHTML]="'description' | translate">
         </p>
         <button class="btn-gold btn-large" data-aos="fade-down" data-aos-delay="1050" (click)="onScroll('#contact')">{{ 'contact-button' | translate }}</button>
     </div>

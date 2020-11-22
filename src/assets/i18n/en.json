@@ -47,43 +47,49 @@
     "services": {
         "dapp": {
             "headline": "DApp Development",
-            "icon": "../images/services/dapp",
+            "icon": "./assets/images/services/dapp.svg",
             "definition": "A dencetralized application is an application built on a decentralized network. A DApp is composed of a smart contract and a frontend interface.",
             "benefits": "Main benefits: Privacy, No downtime, Censorship resistant, and Immune to single points of failure",
             "description": "At Blockbrainers, we really beleive in a fully decentralized world. We design and implement Decentralized Applications running on Ethereum, EOS, or Hyperledger."
         },
         "smartContractDev": {
             "headline": "Smart Contract Development",
+            "icon": "./assets/images/services/smart-contract-dev.svg",
             "definition": "A smart contract is a self-executing program that run on a decentralized network such as blockchain.",
             "benefits": "Main benefits: Transparency, Accuracy, Speed, Security, Storage, Savings, Trust...",
             "description": "At Blockbrainers, we design, develop and deploy smart contracts to Ethereum or EOS Blockchain written in Solidity and C++."
         },
         "smartContractAudit": {
             "headline": "Smart Contract Audit",
+            "icon": "./assets/images/services/smart-contract-audit.svg",
             "definition": "A smart contract audit is a smart contract's code analysis",
             "benefits": "Main benefits: Detecttion and correction of potentials design issues, errors in the code, and security vulnerabilities",
             "description": "At Blockbrainers, we share our smart contract expertise to audit yours."
         },
         "digitalAssets": {
             "headline": "Digital Assets",
+            "icon": "./assets/images/services/digital-assets.svg",
             "definition": "Digital assets include almost any digital content such as crypto-currency tokens listed on stock exchanges, and more...",
             "benefits": "Main benefits: No geograpic barriers, No Middlemen, Increased liquidity, Reduced transaction costs, Redemption, Asset interoperability.",
             "description": "At Blockbrainers, we create crypto tokens such as top level ERC20 and ERC721 tokens.  ERC20 and ERC721, the Ethereum token standard, is a technical standard used for smart contracts on the Ethereum blockchain."
         },
         "cryptoWallet": {
             "headline": "Crypto Wallet",
+            "icon": "./assets/images/services/crypto-wallet.svg",
             "definition": "A crypto wallet is a digital wallet that allows users to store and manage their digita assets such as crypto currencies (Ethers, Bitcoins), and tokens. There is diferent type of wallets.",
             "benefits": "Main benefits: Accessibility, Security, Privacy, Speed, Trust.",
             "description": "At Blockbrainers, we create top level ERC20 tokens. ERC20, the Ethereum token standard, is a technical standard used for smart contracts on the Ethereum blockchain."
         },
         "integration": {
             "headline": "Blockchain Integration",
+            "icon": "./assets/images/services/integration.svg",
             "definition": "Blockchain is a protocol and ledger for building an immutable historical record of transactions.",
             "benefits": "Main benefits: ",
             "description": "At Blockbrainers, we customize Blockchain solutions to solve problems and create new opportunities for your business."
         },
         "training": {
             "headline": "Blockchain Training",
+            "icon": "./assets/images/services/training.svg",
             "definition": "",
             "benefits": "Main benefits: ",
             "description": "At Blockbrainers, we shared our knoledges. We offer functional or technical training for enterprise."

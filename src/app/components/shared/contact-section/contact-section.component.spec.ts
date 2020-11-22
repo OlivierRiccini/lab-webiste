@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { HomeContactComponent } from './home-contact.component';
+import { ContactSectionComponent } from './contact-section.component';
 
-describe('HomeContactComponent', () => {
-  let component: HomeContactComponent;
-  let fixture: ComponentFixture<HomeContactComponent>;
+describe('ContactSectionComponent', () => {
+  let component: ContactSectionComponent;
+  let fixture: ComponentFixture<ContactSectionComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeContactComponent ]
+      declarations: [ ContactSectionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeContactComponent);
+    fixture = TestBed.createComponent(ContactSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

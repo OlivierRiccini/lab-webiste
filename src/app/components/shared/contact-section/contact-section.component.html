@@ -1,0 +1,12 @@
+<div class="wrapper" [ngStyle]="{ 'background-color': backgroudColor }">
+    <h2 *ngIf="title" class="title-bolder">{{ title }}</h2>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <app-contact-socials></app-contact-socials>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <app-contact-form></app-contact-form> 
+        </div>
+    </div>
+</div>

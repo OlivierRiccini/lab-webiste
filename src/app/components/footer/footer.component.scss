@@ -10,21 +10,7 @@ footer {
     left: 0;
 }
 
-#contact {
-    padding: 70px $global-sides-padding;
-    background-color: $opal;
-}
-
-@media screen and (max-width: 768px) {
-    #contact {
-        padding: 50px $global-sides-padding-medium;
-    }
-}
-
 @media screen and (max-width: 500px) {
-    #contact {
-        padding: 50px $global-sides-padding-small;
-    }
     footer {
         padding: 30px $global-sides-padding-small;
     }

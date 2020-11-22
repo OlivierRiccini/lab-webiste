@@ -6,6 +6,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'src/sass/variables';
 @import '../sass/components/buttons';
+@import '../sass/components/separator';
 
 html {
     overflow: scroll;
@@ -34,9 +35,22 @@ body {
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
 }
 
+p, a, h1, h2, h3, h4 {
+    letter-spacing: 2.2px;
+}
+
 .title-bolder {
     font-weight: 800;
     width: fit-content;
+}
+
+.title-page {
+    font-weight: 800;
+    width: fit-content;
+    padding-left: 10px;
+    border-left: 1px solid $prussian-blue;
+    font-size: 2rem;
+    margin-bottom: 50px;
 }
 
 .text-lighter {
