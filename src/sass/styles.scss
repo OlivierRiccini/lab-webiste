@@ -6,6 +6,17 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'src/sass/variables';
 @import '../sass/components/buttons';
+@import '../sass/components/separator';
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 body {
     font-family: 'Raleway', 'Helvetica', sans-serif;
@@ -13,9 +24,9 @@ body {
     letter-spacing: 1.5px;
     margin: 0px;
     overflow-x: hidden;
-    color: $prussian-blue;
+    color: $blue-dark;
     a {
-        color: $prussian-blue;
+        color: $blue-dark;
     }
 }
 
@@ -24,10 +35,57 @@ body {
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
 }
 
+p, a {
+    font-size: $font-small-size;
+}
+
+p, a, h1, h2, h3, h4 {
+    letter-spacing: 2px;
+}
+
+.font-medium {
+    font-size: $font-medium-size;
+}
+
+.font-large {
+    font-size: $font-large-size;
+}
+
 .title-bolder {
     font-weight: 800;
     width: fit-content;
+}
 
+.title-page {
+    font-weight: 800;
+    width: fit-content;
+    padding-left: 10px;
+    border-left: 1px solid $blue-dark;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+    }
+    .dots {
+        font-weight: 400;
+        font-size: $font-large-size;
+        margin-top: -15px;
+    }
+}
+
+.text-lighter {
+    font-weight: 100;
 }
 
 input, textarea {

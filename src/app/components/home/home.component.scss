@@ -13,10 +13,6 @@
     padding: 70px $global-sides-padding;
 }
 
-#contact {
-    background-color: $opal;
-}
-
 .survey-row {
     width: 100vw;
     display: flex;
@@ -25,17 +21,20 @@
     flex-wrap: wrap;
     padding: 10px;
     margin: 0 calc(-#{$global-sides-padding});
-    background-color: $prussian-blue;
+    background-color: $blue-dark;
     p {
         margin-bottom: 0;
         font-weight: bolder;
-        font-size: 1.2rem;
         text-align: center;
     }
     a, p {
         margin: 10px;
         color: $white;
     }
+}
+
+#services, #blog {
+    background-color: $blue-extra-light;
 }
 
 @media screen and (max-width: 768px) {
@@ -50,6 +49,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .section {
+        padding: 0px 0;
+     }
     .full-width-section {
         padding: 50px $global-sides-padding-small;
         margin: 0 calc(-#{$global-sides-padding-small})

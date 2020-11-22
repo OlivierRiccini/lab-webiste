@@ -1,0 +1,19 @@
+<div [ngClass]="position === 'right' ? 'position-right' : 'position-left'">
+    <div class="contact-section">
+        <p class="contact-section-title">Contact info</p>
+        <a [href]="'mailto:' + contactEmail"><fa-icon [icon]="faEnvelope"></fa-icon> {{ contactEmail }}</a>
+    </div>
+    <div class="contact-section socials" target="_blank">
+        <p class="contact-section-title">Socials</p>
+        <a href="">
+            <img src="../../../../assets/svg/linkedin-icon.svg" alt="">
+        </a>
+        <a href="https://blockbrainers.medium.com/" target="_blank">
+            <img src="../../../../assets/svg/medium-icon.svg" alt="">
+        </a>
+    </div>
+    <div class="contact-section">
+        <p class="contact-section-title">Please help us improve our services</p>
+        <a class="btn-gold btn-medium" href="https://forms.gle/8kg7TmopLCgm74oc7" target="_blank">Take the survey</a>
+    </div>
+</div>

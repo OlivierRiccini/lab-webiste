@@ -1,34 +1,38 @@
 <form *ngIf="!isSending && !error && !success" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row">
         <div class="col-sm-12 col-md-12 form-group">
-
-            <div class="form-group">
-                <label for="firstName">{{ 'contact.form.firstName.label' | translate | titlecase }}</label>
-                <input
-                    [class.is-invalid]="contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)"
-                    class="form-control"
-                    id="firstName"
-                    formControlName="firstName"
-                    type="text"
-                    [placeholder]="'contact.form.firstName.placeholder' | translate">
-        
-                <div *ngIf="(contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)) || contactForm.get('firstName').dirty">
-                    <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.firstName.error.required' | translate }}</small>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                        <label for="firstName">{{ 'contact.form.firstName.label' | translate | titlecase }}</label>
+                        <input
+                            [class.is-invalid]="contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)"
+                            class="form-control"
+                            id="firstName"
+                            formControlName="firstName"
+                            type="text"
+                            [placeholder]="'contact.form.firstName.placeholder' | translate">
+                
+                        <div *ngIf="(contactForm.get('firstName').invalid && (contactForm.get('firstName').touched)) || contactForm.get('firstName').dirty">
+                            <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.firstName.error.required' | translate }}</small>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label for="lastName">{{ 'contact.form.lastName.label' | translate | titlecase }}</label>
-                <input
-                    [class.is-invalid]="contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)"
-                    class="form-control"
-                    id="lastName"
-                    formControlName="lastName"
-                    type="text"
-                    [placeholder]="'contact.form.lastName.placeholder' | translate">
-        
-                <div *ngIf="(contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)) || contactForm.get('lastName').dirty">
-                    <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.lastName.error.required' | translate }}</small>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                        <label for="lastName">{{ 'contact.form.lastName.label' | translate | titlecase }}</label>
+                        <input
+                            [class.is-invalid]="contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)"
+                            class="form-control"
+                            id="lastName"
+                            formControlName="lastName"
+                            type="text"
+                            [placeholder]="'contact.form.lastName.placeholder' | translate">
+                
+                        <div *ngIf="(contactForm.get('lastName').invalid && (contactForm.get('lastName').touched)) || contactForm.get('lastName').dirty">
+                            <small *ngIf="contactForm.get('from').errors?.required" class="text-danger">{{ 'contact.form.lastName.error.required' | translate }}</small>
+                        </div>
+                    </div>
                 </div>
             </div>
 

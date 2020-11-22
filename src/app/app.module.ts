@@ -14,9 +14,7 @@ import { CareersComponent } from './components/careers/careers.component';
 import { HomeWorkComponent } from './components/home/home-work/home-work.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeServicesComponent } from './components/home/home-services/home-services.component';
-import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeContactComponent } from './components/footer/home-contact/home-contact.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
@@ -27,6 +25,11 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
+import { ContactSocialsComponent } from './components/shared/contact-socials/contact-socials.component';
+import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
+import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,7 +46,7 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     HomeServicesComponent,
     ContactFormComponent,
-    HomeContactComponent,
+    ContactSectionComponent,
     TopNavComponent,
     SideNavComponent,
     HomeProcessComponent,
@@ -51,7 +54,10 @@ export function createTranslateLoader(http: HttpClient) {
     HomeAboutComponent,
     LoaderComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    ContactComponent,
+    ContactSocialsComponent,
+    HomeBlogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

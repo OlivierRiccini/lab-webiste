@@ -44,7 +44,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -144,11 +143,7 @@
               "sourceMap": false,
               "optimization": true
             },
-            "assets": [
-              "src/favicon.png",
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": {}
           }
         },
         "serve-ssr": {
