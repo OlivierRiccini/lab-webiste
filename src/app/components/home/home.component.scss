@@ -21,17 +21,20 @@
     flex-wrap: wrap;
     padding: 10px;
     margin: 0 calc(-#{$global-sides-padding});
-    background-color: $prussian-blue;
+    background-color: $blue-dark;
     p {
         margin-bottom: 0;
         font-weight: bolder;
-        font-size: 1.2rem;
         text-align: center;
     }
     a, p {
         margin: 10px;
         color: $white;
     }
+}
+
+#services {
+    background-color: $blue-extra-light;
 }
 
 @media screen and (max-width: 768px) {

@@ -26,16 +26,27 @@
     width: fit-content;
 }
 
+.contact-section-title {
+    font-weight: bolder;
+}
+
 .position-left {
     .contact-section {
         padding-left: 15px;
-        border-left: 1px solid $prussian-blue;
+        border-left: 1px solid $blue-dark;
     }
 }
 
 .position-right {
     .contact-section {
         padding-right: 15px;
-        border-right: 1px solid $prussian-blue;
+        border-right: 1px solid $blue-dark;
     }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-section {
+        border-left: none;
+        padding-left: 0;
+    }  
 }

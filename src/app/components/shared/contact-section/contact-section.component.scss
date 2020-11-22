@@ -3,11 +3,11 @@
 .wrapper {
     padding: 35px $global-sides-padding;
     margin: 0 calc(-#{$global-sides-padding});
-    background-color: $opal;
+    background-color: $blue-light;
 }
 
-.contact-section-title {
-    font-weight: bolder;
+.title-box {
+    margin-bottom: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -21,9 +21,5 @@
     .wrapper {
         margin: 0 calc(-#{$global-sides-padding-small});
         padding: 50px $global-sides-padding-small;
-    }
-    .contact-section {
-        border-left: none;
-        padding-left: 0;
     }
 }

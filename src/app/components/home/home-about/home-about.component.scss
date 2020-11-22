@@ -1,7 +1,6 @@
 @import 'src/sass/variables';
 
 h1 {
-  font-size: 16px; 
   text-align: center;
   margin-bottom: 40px;
 }
@@ -10,6 +9,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .quote-container {
@@ -22,7 +22,6 @@ h1 {
     margin: 0;
     padding: 0;
     background: none;
-    font-size: 1.4em;
     font-style: italic;
     line-height: 1.4 !important;
     margin: 0;
@@ -31,7 +30,7 @@ h1 {
 
 .testimonial-quote blockquote p:first-child:before {
     content: '\201C';
-    color: $prussian-blue;
+    color: $blue-dark;
     font-size: 7.5em;
     font-weight: 700;
     opacity: .3;
@@ -44,12 +43,18 @@ h1 {
 
 .testimonial-quote img {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
+    object-fit: scale-down;
 }
 
 .testimonial-quote cite {
-    color: $prussian-blue;;
+    color: $blue-dark;;
     display: block;
-    font-size: .8em; 
+}
+
+.btn-small {
+    width: fit-content;
+    margin-top: 10px;
+    font-style: initial;
 }
