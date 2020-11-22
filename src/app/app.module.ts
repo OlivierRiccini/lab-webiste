@@ -29,6 +29,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { ContactSocialsComponent } from './components/shared/contact-socials/contact-socials.component';
 import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
+import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +56,8 @@ export function createTranslateLoader(http: HttpClient) {
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    ContactSocialsComponent
+    ContactSocialsComponent,
+    HomeBlogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -71,6 +71,17 @@ p, a, h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+    }
+    .dots {
+        font-weight: 400;
+        font-size: $font-large-size;
+        margin-top: -15px;
+    }
 }
 
 .text-lighter {
