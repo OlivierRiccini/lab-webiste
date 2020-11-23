@@ -15,11 +15,20 @@
         margin: 0 calc(-#{$global-sides-padding-medium});
         padding: 50px $global-sides-padding-medium;
     }
+    .title-box {
+        margin-bottom: 40px;
+    }
+    .contact-details {
+        margin-bottom: 80px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .wrapper {
         margin: 0 calc(-#{$global-sides-padding-small});
         padding: 50px $global-sides-padding-small;
+    }
+    .contact-details {
+        margin-bottom: 40px;
     }
 }
