@@ -24,23 +24,20 @@
 .contact-section {
     margin: 35px 0;
     width: fit-content;
+    padding-left: 15px;
+    border-left: 1px solid $blue-dark;
 }
 
 .contact-section-title {
-    font-weight: bolder;
+    font-weight: 600;
 }
 
-.position-left {
+@media screen and (max-width: 768px) {
     .contact-section {
-        padding-left: 15px;
-        border-left: 1px solid $blue-dark;
-    }
-}
-
-.position-right {
-    .contact-section {
-        padding-right: 15px;
-        border-right: 1px solid $blue-dark;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+        margin: 0 auto 40px auto;
     }
 }
 
