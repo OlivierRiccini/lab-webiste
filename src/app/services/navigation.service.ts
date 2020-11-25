@@ -72,7 +72,10 @@ export class NavigationService {
 
     if (isPlatformBrowser(this.platformId)) {
       const browserLang = this.translateService.getBrowserLang().toLowerCase();
-      defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
+      // TODO: change when translations will be available
+      // defaultLang = langValues.includes(browserLang) ? browserLang : 'en';
+      defaultLang = 'en';
+
       const currentLang = this.availableLanguages.find(lang => lang.value === defaultLang);
       this.currentLang = new BehaviorSubject(currentLang);
       this.currentLang$ = this.currentLang.asObservable();
