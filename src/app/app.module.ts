@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,9 +14,7 @@ import { CareersComponent } from './components/careers/careers.component';
 import { HomeWorkComponent } from './components/home/home-work/home-work.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeServicesComponent } from './components/home/home-services/home-services.component';
-import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeContactComponent } from './components/home/home-contact/home-contact.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TopNavComponent } from './components/navbar/top-nav/top-nav.component';
 import { SideNavComponent } from './components/navbar/side-nav/side-nav.component';
@@ -25,6 +23,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing-img.component';
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
+import { AboutComponent } from './components/about/about.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
+import { ContactSocialsComponent } from './components/shared/contact-socials/contact-socials.component';
+import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
+import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -37,16 +46,21 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     FooterComponent,
     HomeServicesComponent,
     ContactFormComponent,
-    HomeContactComponent,
+    ContactSectionComponent,
     TopNavComponent,
     SideNavComponent,
     HomeProcessComponent,
     SvgLandingImgComponent,
     HomeAboutComponent,
-    LoaderComponent
+    LoaderComponent,
+    AboutComponent,
+    ServicesComponent,
+    ContactComponent,
+    ContactSocialsComponent,
+    HomeBlogComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
@@ -56,19 +70,14 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
-        deps: [HttpClient]
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient, TransferState]
       }
     }),
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [TransferState],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-// AOT compilation support
-export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}

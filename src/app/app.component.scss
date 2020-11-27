@@ -4,6 +4,14 @@
     padding: $navbar-height $global-sides-padding 0 $global-sides-padding;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
 @media screen and (max-width: 1400px) {
     .main-wrapper {
         padding: $navbar-height $global-sides-padding-xl 0 $global-sides-padding-xl;

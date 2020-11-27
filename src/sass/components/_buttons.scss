@@ -42,3 +42,10 @@
 .btn-large {
     padding: 20px 40px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .btn-large {
+        padding: 15px 30px;
+    }
+}

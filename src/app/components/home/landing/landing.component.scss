@@ -14,19 +14,12 @@
     border-left: 1px solid;
     padding: 10px 0 10px 40px;
     max-width: 50%;
-    h2 {
+    border-color: $blue-dark;
+    h1 {
         margin-bottom: 35px;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 700;
     }
-    p {
-        margin: 0;
-        font-size: 1.5rem;
-    }
-}
-
-.content {
-    border-color: $prussian-blue;
 }
 
 .btn-gold {
@@ -45,20 +38,50 @@
         border-left: 1px solid;
         padding: 20px 0 20px 40px;
         max-width: 100%;
-        h2 {
-            margin-bottom: 35px;
-            font-size: 2.5rem;
-            font-weight: 700;
+        text-align: center;
+        border: none;
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2rem;
         }
-        p {
-            margin: 0;
-            font-size: 1.5rem;
+        .btn-gold {
+            font-size: 20px;
+            margin: 40px auto 0 auto;
+            padding: 20px 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.85rem;
+        }
+        .btn-gold {
+            margin-top: 25px;
         }
     }
 }
 
 @media screen and (max-width: 500px) {
-      .content {
-        padding: 10px 0 20px 10px;
+    .flex-container {
+        padding-top: 20px;
+    }
+    .content {
+        padding: 0px 0px 20px 0px;
+        border: none;
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        p {
+            margin: 8px;
+        }
+        .btn-gold {
+            margin-top: 25px;
+            padding: 10px 30px;
+        }
     }
 }

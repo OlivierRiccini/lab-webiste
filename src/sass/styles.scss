@@ -6,6 +6,17 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'src/sass/variables';
 @import '../sass/components/buttons';
+@import '../sass/components/separator';
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 body {
     font-family: 'Raleway', 'Helvetica', sans-serif;
@@ -13,21 +24,69 @@ body {
     letter-spacing: 1.5px;
     margin: 0px;
     overflow-x: hidden;
-    color: $prussian-blue;
+    color: $blue-dark;
     a {
-        color: $prussian-blue;
+        color: $blue-dark;
     }
 }
 
 .page-container {
-    margin-top: $navbar-height;
+    padding: $navbar-height 0;
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
+}
+
+p, a {
+    font-size: 1rem;
+}
+
+p, a, h1, h2, h3, h4 {
+    letter-spacing: 2px;
+}
+
+.font-medium {
+    font-size: 1.35rem;
+}
+
+.font-large {
+    font-size: 1.6rem;
 }
 
 .title-bolder {
     font-weight: 800;
     width: fit-content;
+}
 
+.title-page {
+    font-weight: 800;
+    width: fit-content;
+    padding-left: 10px;
+    border-left: 1px solid $blue-dark;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+    }
+    .dots {
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-top: -15px;
+    }
+}
+
+.text-lighter {
+    font-weight: 100;
 }
 
 input, textarea {
@@ -36,4 +95,41 @@ input, textarea {
 
 ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-slide:focus {
     outline: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    .font-medium {
+        font-size: 1.2rem;
+    }
+    .font-large {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    p, a {
+        font-size: .95rem;
+    }
+    .font-medium {
+        font-size: 1rem;
+    }
+    .font-large {
+        font-size: 1.15rem;
+    }
+    /////
+    .title-box {
+        margin-bottom: 0px;
+    }
 }

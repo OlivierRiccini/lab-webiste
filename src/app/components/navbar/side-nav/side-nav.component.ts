@@ -23,11 +23,6 @@ export class SideNavComponent {
     this.navigationService.onSwitchLang(langValue);
   }
 
-  public onScroll(target: string): void {
-    this.navigationService.scrollTo(target);
-    this.onToggleSideNav();
-  }
-
   public onToggleSideNav(): void {
     this.navigationService.toggleSideBar();
   }

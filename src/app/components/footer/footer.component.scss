@@ -1,22 +1,17 @@
 @import 'src/sass/variables';
 
 footer {
-    // margin-top: 50px;
-    // padding: 50px 0;
-    //min-height: $footerHeight;
-    // border-top: 1px solid #fff;
-    // position: absolute;
     z-index: 1;
-    // background-color: red;
-    // margin: 0 calc(0px - #{$global-sides-padding}) 0 calc(0px - #{$global-sides-padding});
-    // top: 100%;
-    // width: 100%;
-    // position: absolute;
-    // top: 100%;
     color: $white;
-    background-color: $prussian-blue;
-    padding: 30px 100px;
+    background-color: $blue-dark;
+    padding: 30px $global-sides-padding;
     width: 100vw;
     position: absolute;
     left: 0;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        padding: 30px $global-sides-padding-small;
+    }
 }
