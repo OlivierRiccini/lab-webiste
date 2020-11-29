@@ -7,6 +7,7 @@
 @import 'src/sass/variables';
 @import '../sass/components/buttons';
 @import '../sass/components/separator';
+@import '../sass/components/card';
 
 html {
     overflow: scroll;
@@ -31,7 +32,7 @@ body {
 }
 
 .page-container {
-    padding: $navbar-height 0;
+    padding: $navbar-height 0 0 0;
     min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
 }
 
@@ -62,7 +63,6 @@ p, a, h1, h2, h3, h4 {
     padding-left: 10px;
     border-left: 1px solid $blue-dark;
     font-size: 2rem;
-    margin-bottom: 50px;
 }
 
 .title-box {
@@ -97,6 +97,37 @@ ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-sl
     outline: none !important;
 }
 
+.section {
+    padding: 70px 0;
+ }
+
+.full-width-section {
+    margin: 0 calc(-#{$global-sides-padding});
+    padding: 70px $global-sides-padding;
+}
+
+.section-blue-extra-light {
+    background-color: $blue-extra-light;
+}
+
+.section-blue-light {
+    background-color: $blue-light;
+}
+
+.section-blue {
+    background-color: $blue;
+    a, p, span, h1, h2, h3 {
+        color: $white;
+    }
+}
+
+.section-blue-dark {
+    background-color: $blue-dark;
+    a, p, blockquote, span, h1, h2, h3 {
+        color: $white;
+    }
+}
+
 @media screen and (max-width: 768px) {
     h2 {
         font-size: 1.8rem;
@@ -109,6 +140,17 @@ ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-sl
     }
     .font-large {
         font-size: 1.4rem;
+    }
+    .section {
+        padding: 50px 0;
+     }
+    .full-width-section {
+        padding: 50px $global-sides-padding-medium;
+        margin: 0 calc(-#{$global-sides-padding-medium});
+    }
+    .title-page {
+        margin: 0 auto;
+        border: none;
     }
 }
 
@@ -131,5 +173,12 @@ ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-sl
     /////
     .title-box {
         margin-bottom: 0px;
+    }
+    .section {
+        padding: 0px 0;
+     }
+    .full-width-section {
+        padding: 50px $global-sides-padding-small;
+        margin: 0 calc(-#{$global-sides-padding-small})
     }
 }

@@ -1,17 +1,18 @@
 <div class="page-container">
     <h1 class="title-page">OUR SERVICES</h1>
-    <br>
-    <div id="container">
-        <div class="row">
-            <div class="col-sm-12 col-sm-6 col-md-4 card-wrapper" *ngFor="let service of services">
-                <div class="card-content">
-                    <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
-                    <p>{{ 'services.' + service + '.definition' | translate }}</p>
-                    <p>{{ 'services.' + service + '.benefits' | translate }}</p>
-                    <p>{{ 'services.' + service + '.description' | translate }}</p>
-                </div>
+    <!-- <div class="section"> -->
+        <div *ngFor="let service of services; let i = index" [ngClass]="{'full-width-section': true, 'service-section': true, 'odd-section':i % 2 !== 0 }">
+            <div class="content">
+                <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
+                <br>
+                <p>{{ 'services.' + service + '.definition' | translate }}
+                    {{ 'services.' + service + '.benefits' | translate }}
+                    {{ 'services.' + service + '.description' | translate }}</p>
+            </div>
+            <div class="image-box">
+                <img [src]="'services.' + service + '.icon' | translate" alt="service">
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 <app-contact-section [title]="'GET IN TOUCH'"></app-contact-section>

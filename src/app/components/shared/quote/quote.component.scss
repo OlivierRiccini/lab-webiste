@@ -1,0 +1,67 @@
+@import 'src/sass/variables';
+
+.testimonial-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quote-container {
+    max-width: 70%;
+}
+
+.testimonial-quote blockquote {
+    /* Negate theme styles */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin: 0;
+    position: relative;
+}
+
+.quote-container {
+    padding: 0 20px;
+}
+
+.testimonial-quote img {
+    border-radius: 50%;
+    background: #fff;
+    width: 220px;
+    height: 220px;
+    object-fit: scale-down;
+}
+
+.testimonial-quote cite {
+    color: $blue-dark;;
+    display: block;
+    margin-top: 15px;
+}
+
+.btn-small {
+    width: fit-content;
+    margin-top: 10px;
+    font-style: initial;
+}
+
+svg {
+    margin: 0 8px;
+    opacity: .8;
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-quote {
+        text-align: center;
+    }
+    .testimonial-quote img {
+        width: 170px;
+        height: 170px;
+        margin: 20px auto;
+    }
+    .btn-small {
+        margin: 10px auto;
+    }
+}
