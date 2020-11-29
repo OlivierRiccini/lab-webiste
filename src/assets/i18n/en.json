@@ -95,38 +95,30 @@
             "description": "At Blockbrainers, we shared our knoledges. We offer functional or technical training for enterprise."
         }
     },
-    "processes": {
+    "processSteps": {
         "idea": {
             "headline": "Idea",
-            "text": "You have an idea, contact and explain it to us!"
-        },
-        "introduction": {
-            "headline": "Introduction",
-            "text": "We meet for a first introduction and discuss your idea."
+            "text": "You have an idea or need one, talk to us! We get to know each other, and we explain what value we can bring to you."
         },
         "analysis": {
-            "headline": "Project Analysis",
-            "text": "Blockbrainers's business analysts will work hand by hand with you to define your needs."
+            "headline": "Analysis",
+            "text": "Blockbrainer's business analysts work hand to hand with you to define your business needs. Our architects set the technical requirements of the solution."
         },
-        "architechture": {
-            "headline": "Project architechture",
-            "text": "Blockbrainers blockchain architects and engineers, will design the technical architecture that meet all the project requirements."
+        "planning": {
+            "headline": "Planning",
+            "text": "After functional and technical analysis, we define the project's scope and roadmap."
         },
-        "timeFrame": {
-            "headline": "Project time frame",
-            "text": "At this phase, we'll provide you a time frame for the project."
-        },
-        "mvp": {
+        "MVP": {
             "headline": "MVP",
-            "text": "Blockbrainers engineers will implement a Minimum Valuable Product ofr your project."
+            "text": "We build a Minimum Valuable Product, a simple implementation of the main features to test it with real users, collecting feedback, and get ready for the full implementation."
         },
         "fullImplementation": {
-            "headline": "Full implementation",
-            "text": "If the MVP meets the project base requrements, we'll implement the full scale version of your project."
+            "headline": "Full Implementation",
+            "text": "After having tested and approved MVP, we're ready to build the entire project."
         },
         "maintenance": {
             "headline": "Maintenance",
-            "text": "Even after the project, Blockbrainers we'll stay on your sides to make sure your product is up to date."
+            "text": "After successfully launch your project, we'll still support you, bringing improvement and fixing if needed."
         }
     }
 }

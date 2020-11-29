@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import AOS from 'aos';
 
 @Component({
@@ -7,21 +8,31 @@ import AOS from 'aos';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
   title = 'Blockbrainers';
   public isBrowser = false;
   public topened = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+  constructor(@Inject(PLATFORM_ID) private platformId: any, private router: Router) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     if (this.isBrowser) {
       AOS.init({
         disable: 'mobile'
       });
     }
+
+
   }
 
-  public ngOnInit(): void {
+  public ngAfterViewInit(): void {
+    if (this.isBrowser) {
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          (window as any).gtag('set', 'page', event.urlAfterRedirects);
+          (window as any).gtag('send', 'pageview');
+        }
+      });
+    }
   }
 
 }

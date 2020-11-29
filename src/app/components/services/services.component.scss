@@ -1,0 +1,45 @@
+@import 'src/sass/variables';
+
+.service-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // margin-bottom: 50px;
+    .content {
+        width: 70%;
+    }
+    .image-box {
+        display: flex;
+        align-items: center;
+        width: 180px;
+    }
+    .image-box img {
+        width: 100%;
+        opacity: .7;
+    }
+}
+
+.odd-section {
+    background-color: $blue-extra-light;
+}
+
+@media screen and (max-width: 768px) {
+    .service-section {
+        justify-content: center;
+        .content {
+            width: 100%;
+            text-align: center;
+        }   
+        .image-box {
+            width: 150px;
+        } 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-section {
+        .image-box {
+            width: 120px;
+        }
+    }
+}
