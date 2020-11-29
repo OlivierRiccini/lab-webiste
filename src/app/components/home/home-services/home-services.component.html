@@ -5,7 +5,7 @@
 </div>
 <div id="container">
     <div class="card-wrapper" *ngFor="let service of services">
-        <a routerLink="/services">
+        <a routerLink="/services" [fragment]="service">
             <div class="card-content">
                 <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
                 <!-- <h3>{{ 'services.' + service + '.icon' | translate}}</h3> -->
