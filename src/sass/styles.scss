@@ -181,4 +181,7 @@ ngb-carousel:focus, .carousel-inner:focus, .carousel-item.active:focus, .flex-sl
         padding: 50px $global-sides-padding-small;
         margin: 0 calc(-#{$global-sides-padding-small})
     }
+    .page-container {
+        padding: 30px 0 0 0;
+    }
 }

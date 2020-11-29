@@ -20,7 +20,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    margin: 0 calc(-#{$global-sides-padding});
+    // margin: 0 calc(-#{$global-sides-padding});
     background-color: $blue-dark;
     p {
         margin-bottom: 0;
