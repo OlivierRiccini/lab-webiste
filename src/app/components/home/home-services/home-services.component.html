@@ -8,7 +8,6 @@
         <a routerLink="/services" [fragment]="service">
             <div class="card-content">
                 <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
-                <!-- <h3>{{ 'services.' + service + '.icon' | translate}}</h3> -->
                 <img [src]="'services.' + service + '.icon' | translate" alt="">
                 <span class="btn-small btn-white">Learn more</span>
             </div>
