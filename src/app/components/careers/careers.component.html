@@ -1,5 +1,21 @@
 <div class="page-container">
     <h1 class="title-page">CAREERS</h1>
-    <p>careers works!</p>
+    <div class="section">
+        <ngb-accordion #acc="ngbAccordion">
+            <ngb-panel *ngFor="let job of jobs; let i = index" [id]="'jobid' + i + 1">
+                <ng-template ngbPanelTitle>
+                    <span>{{ job.title }} ( {{ job.createdAt | date }} ) ...</span>
+                </ng-template>
+              <ng-template ngbPanelContent>
+                <p><b>Posted on:</b> {{ job.createdAt | date }}</p>
+                <p><b>Location:</b> {{ job.location }}</p>
+                <p><b>Job description:</b> {{ job.description }}</p>
+                <p><b>Requirements:</b> {{ job.requirements }}</p>
+                <p><b>Job details:</b> {{ job.offer }}</p>
+                <button class="btn-medium btn-white">Apply</button>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+    </div>
 </div>
 <app-contact-section [title]="'GET IN TOUCH'"></app-contact-section>
