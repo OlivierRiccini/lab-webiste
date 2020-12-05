@@ -1,4 +1,4 @@
-import { BrowserModule, TransferState } from '@angular/platform-browser';
+import { BrowserModule, Title, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -79,7 +79,7 @@ export function createTranslateLoader(http: HttpClient) {
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [TransferState],
+  providers: [TransferState, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
