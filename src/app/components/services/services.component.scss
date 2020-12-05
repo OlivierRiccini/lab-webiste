@@ -10,7 +10,7 @@
     .image-box {
         display: flex;
         align-items: center;
-        width: 180px;
+        width: 135px;
     }
     .image-box img {
         width: 100%;
@@ -30,7 +30,7 @@
             text-align: center;
         }   
         .image-box {
-            width: 150px;
+            width: 115px;
         } 
     }
 }
@@ -38,7 +38,7 @@
 @media screen and (max-width: 500px) {
     .service-section {
         .image-box {
-            width: 120px;
+            width: 100px;
         }
     }
 }

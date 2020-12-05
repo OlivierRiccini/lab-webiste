@@ -5,23 +5,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 5rem;
-    column-gap: 6rem;
-}
-
-.card-wrapper {
-    padding: 30px;
+    margin: -2.5rem;
 }
 
 a {
     text-decoration: none;
     color: $blue-dark;
     outline: none;
+    margin: 2.5rem;
 }
 
 @media screen and (max-width: 500px) {
     #container {
-        row-gap: 20px;
-        column-gap: 20px;
+        margin: -20px;
+    }
+    a {
+        margin: 20px;
     }
 }
