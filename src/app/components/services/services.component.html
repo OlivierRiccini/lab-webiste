@@ -9,7 +9,7 @@
                 {{ 'services.' + service + '.description' | translate }}</p>
         </div>
         <div class="image-box">
-            <img [src]="'services.' + service + '.icon' | translate" alt="service">
+            <img [src]="'services.' + service + '.icon' | translate" [attr.alt]="service + ' icon'">
         </div>
     </div>
 </div>
