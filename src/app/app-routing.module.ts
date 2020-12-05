@@ -8,11 +8,36 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FragmentGuard } from './guards/fragment.guard';
 
 const routes: Routes = [
-  { path: '', canActivate: [FragmentGuard], component: HomeComponent, pathMatch: 'full' },
-  { path: 'services', canActivate: [FragmentGuard], component: ServicesComponent },
-  { path: 'about', canActivate: [FragmentGuard], component: AboutComponent },
-  { path: 'careers', canActivate: [FragmentGuard], component: CareersComponent },
-  { path: 'contact', component: ContactComponent }
+  {
+    path: '',
+    canActivate: [FragmentGuard],
+    component: HomeComponent,
+    pathMatch: 'full',
+    data: { title: 'Blockbrainers | Blockchain Consulting Company' }
+  },
+  {
+    path: 'services',
+    canActivate: [FragmentGuard],
+    component: ServicesComponent,
+    data: { title: 'Services | Blockbrainers' }
+  },
+  {
+    path: 'about',
+    canActivate: [FragmentGuard],
+    component: AboutComponent,
+    data: { title: 'About | Blockbrainers' }
+  },
+  {
+    path: 'careers',
+    canActivate: [FragmentGuard],
+    component: CareersComponent,
+    data: { title: 'Careers | Blockbrainers' }
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Blockbrainers | Contact | Blockchain Consulting Company' }
+  }
 ];
 
 @NgModule({
