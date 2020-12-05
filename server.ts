@@ -28,7 +28,6 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { enableProdMode } from '@angular/core';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 enableProdMode();
 
@@ -45,6 +44,20 @@ export function app(): express.Express {
 
   server.set('view engine', 'html');
   server.set('views', DIST_FOLDER);
+
+
+  if (process.env.NODE_ENV === 'production') {
+    server.enable('trust proxy');
+    server.use((req, res, next) => {
+        if (req.secure) {
+            // https request, nothing to handle
+            next();
+        } else {
+            // this is an http request, redirect to https
+            res.redirect(301, 'https://' + req.headers.host + req.url);
+        }
+    });
+  }
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
