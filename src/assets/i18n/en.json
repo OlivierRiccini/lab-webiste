@@ -52,15 +52,15 @@
             "benefits": "Main benefits: Privacy, No downtime, Censorship resistant, and Immune to single points of failure.",
             "description": "At Blockbrainers, we really believe in a fully decentralized world. We design and implement Decentralized Applications running on Ethereum, EOS, or Hyperledger."
         },
-        "smartContractDev": {
-            "headline": "Smart Contract Development",
+        "smartContractsDev": {
+            "headline": "Smart Contracts Development",
             "icon": "./assets/images/services/smart-contract-dev.svg",
             "definition": "A smart contract is a self-executing program that runs on a decentralized network such as blockchain.",
             "benefits": "Main benefits: Transparency, Accuracy, Speed, Security, Storage, Savings, Trust...",
             "description": "At Blockbrainers, we design, develop, and deploy smart contracts to Ethereum or EOS Blockchain written in Solidity and C++."
         },
-        "smartContractAudit": {
-            "headline": "Smart Contract Audit",
+        "smartContractsAudit": {
+            "headline": "Smart Contracts Audit",
             "icon": "./assets/images/services/smart-contract-audit.svg",
             "definition": "A smart contract audit is a smart contract's code analysis.",
             "benefits": "Main benefits: Detection and correction of potentials design issues, errors in the code, and security vulnerabilities.",
