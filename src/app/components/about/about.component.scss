@@ -12,11 +12,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: -25px;
 }
 
 .logo {
-    width: 75px;
+    width: 70px;
     margin: 0 25px;
 }
 
@@ -24,7 +23,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 5em;
 }
 
 .card-content {
@@ -32,6 +30,10 @@
     justify-content: flex-start;
     height: fit-content;
     width: 55%;
+    margin-bottom: 5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
     cursor: initial;
     h3 {
         margin-bottom: 15px;
@@ -60,12 +62,19 @@
     }
 }
 
+.title-page {
+    margin-bottom: -30px;
+}
+
 @media screen and (max-width: 768px) {
     p {
         text-align: center;
     }    
     .card-content {
         width: 85%;
+    }
+    .logo {
+        width: 55px;
     }
 }
 
@@ -76,5 +85,8 @@
     }
     .process-container {
         row-gap: 0em;
+    }
+    .logo {
+        width: 45px;
     }
 }

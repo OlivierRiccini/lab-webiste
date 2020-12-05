@@ -2,23 +2,36 @@
     <h1 class="title-page">ABOUT US</h1>
     <div class="row section">
         <div class="col-xs-12 col-md-6">
-            <p>Blockchain massive adoption is on its way... don't miss the opportunity of a lifetime!</p>
-            <p>Blockchain is a famous and revolutionizing technology, but most people don't know about it 
-                beyond cryptocurrency. Blockchain offers a lot more.
-            </p> 
+            
+            <p><b>Blockchain massive adoption is on its way... don't miss the opportunity of a lifetime!</b></p>
+
             <p>
-                Don't know that much about blockchain technology? <br>
-                Not the first time you hear about blockchain, but you feel something big is happening?
+                Blockchain is a famous and revolutionizing technology, but most people don't know about it beyond cryptocurrency. 
+                Blockchain offers a lot more.
             </p>
-            <p>At Blockbrainers, we're here to help you understand and analyze your business to see how you can benefit from it.</p>
+
+            <p>You don't know that much about blockchain technology?</p>
+
             <p>
-                Founded by Olivier Riccini, a software engineer and blockchain enthusiasm, Blockbrainers is a 
-                software company specialized in blockchain technology.</p>
-            <p>
-                We are a team of blockchain experts, especially in Decentralized Application and smart contracts development, 
-                digital assets management, blockchain architecture, integration, and analysis.
+                At Blockbrainers, we help you understand and analyze your business to see how you can benefit from it. 
+                We use <a href="https://www.ideou.com/blogs/inspiration/what-is-design-thinking" target="_blank">
+                    design thinking
+                </a> to build Blockchain solutions to your problems.
             </p>
-            <p>Please don't hesitate to reach out to us if you have any questions or projects to submit.</p>
+
+            <p>
+                Founded by Olivier Riccini, a software and blockchain engineer, Blockbrainers is a software company specialized in blockchain technology. 
+                We are a team of blockchain experts focused on Decentralized Applications and smart contracts development, 
+                digital assets management, blockchain analysis and integration.
+            </p>
+
+            <p>
+                Please don't hesitate to reach out to us if you have any questions or projects to submit.
+            </p>
+            <button class="btn-gold btn-medium" (click)="onScroll('#contact')">
+                {{ 'contact-button' | translate }}
+            </button>
+            
         </div>
         <div class="col-xs-12 col-md-6">
             <img class="main-img" src="../../../assets/images/about/team.jpg" alt="team">
@@ -29,12 +42,11 @@
             <div class="title-box">
                 <h2 class="title-bolder">OUR PROCESS</h2>
                 <b class="dots">...</b>
-                <p>Our team has expertise in the latest technologies.</p>
             </div>
             <div class="process-container">
                 <div *ngFor="let step of processSteps" class="card-content">
                     <h3>{{ 'processSteps.' + step + '.headline' | translate }}</h3>
-                    <p>{{ 'processSteps.' + step + '.text' | translate }}</p>
+                    {{ 'processSteps.' + step + '.text' | translate }}
                     <div *ngIf="step !== 'maintenance'" class="long-arrow-down"></div>
                 </div>
             </div>
@@ -46,7 +58,7 @@
             <div class="title-box">
                 <h2 class="title-bolder">OUR STACK</h2>
                 <b class="dots">...</b>
-                <p>Our team has expertise in the latest technologies.</p>
+                Our team has expertise in the latest technologies.
             </div>
             <div class="logo-container">
                 <img *ngFor="let logo of logos" class="logo" [src]="'../../../assets/images/stack/' + logo" alt="logo">

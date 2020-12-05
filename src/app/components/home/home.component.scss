@@ -1,17 +1,8 @@
 @import 'src/sass/variables';
 
-// .section {
-//     padding: 70px 0;
-//  }
-
 .section:nth-child(1) {
     background-color: transparent;
 }
-
-// .full-width-section {
-//     margin: 0 calc(-#{$global-sides-padding});
-//     padding: 70px $global-sides-padding;
-// }
 
 .survey-row {
     width: 100vw;
@@ -20,7 +11,6 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    // margin: 0 calc(-#{$global-sides-padding});
     background-color: $blue-dark;
     p {
         margin-bottom: 0;
@@ -38,24 +28,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    // .section {
-    //     padding: 50px 0;
-    //  }
-    // .full-width-section {
-    //     padding: 50px $global-sides-padding-medium;
-    //     margin: 0 calc(-#{$global-sides-padding-medium});
-    // }
-
 }
 
 @media screen and (max-width: 500px) {
-    // .section {
-    //     padding: 0px 0;
-    //  }
-    // .full-width-section {
-    //     padding: 50px $global-sides-padding-small;
-    //     margin: 0 calc(-#{$global-sides-padding-small})
-    // }
     .survey-row {
         padding: 15px 10px;
     }

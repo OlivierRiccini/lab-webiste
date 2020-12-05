@@ -4,7 +4,7 @@
     <p>We offer various custom Blockchain solutions to fit your project and meet you expectations.</p>
 </div>
 <div id="container">
-    <div class="card-wrapper" *ngFor="let service of services">
+    <!-- <div class="card-wrapper" *ngFor="let service of services">
         <a routerLink="/services" [fragment]="service">
             <div class="card-content">
                 <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
@@ -12,5 +12,14 @@
                 <span class="btn-small btn-white">Learn more</span>
             </div>
         </a>
-    </div>
+    </div> -->
+    <!-- <div class="card-wrapper" *ngFor="let service of services"> -->
+        <a *ngFor="let service of services" routerLink="/services" [fragment]="service">
+            <div class="card-content">
+                <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
+                <img [src]="'services.' + service + '.icon' | translate" alt="">
+                <span class="btn-small btn-white">Learn more</span>
+            </div>
+        </a>
+    <!-- </div> -->
 </div>
