@@ -14,7 +14,7 @@
 
 .flex-card-item {
     width: 50%;
-    height: 300px;
+    height: 260px;
     padding: 0px 90px;
 }
 
@@ -38,7 +38,7 @@
     display: block;
     display: -webkit-box;
     margin: 0 auto;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
