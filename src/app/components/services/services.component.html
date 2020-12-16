@@ -4,9 +4,11 @@
         <div class="content">
             <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
             <br>
-            <p>{{ 'services.' + service + '.definition' | translate }}
+            <p>{{ 'services.' + service + '.definition' | translate }}</p>
+            <a class="btn-small btn-white" routerLink="/services">Learn more</a>
+            <!-- <p>{{ 'services.' + service + '.definition' | translate }}
                 {{ 'services.' + service + '.benefits' | translate }}
-                {{ 'services.' + service + '.description' | translate }}</p>
+                {{ 'services.' + service + '.description' | translate }}</p> -->
         </div>
         <div class="image-box">
             <img [src]="'services.' + service + '.icon' | translate" [attr.alt]="service + ' icon'">
