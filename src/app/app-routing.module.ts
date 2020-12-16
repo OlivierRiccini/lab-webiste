@@ -6,6 +6,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FragmentGuard } from './guards/fragment.guard';
+import { ServiceComponent } from './components/service/service.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,12 @@ const routes: Routes = [
     canActivate: [FragmentGuard],
     component: ServicesComponent,
     data: { title: 'Services | Blockbrainers' }
+  },
+  {
+    path: 'services/:serviceName',
+    // canActivate: [FragmentGuard],
+    component: ServiceComponent,
+    data: { title: ':serviceName | Blockbrainers' }
   },
   {
     path: 'about',

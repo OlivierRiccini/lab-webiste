@@ -2,10 +2,10 @@
     <h1 class="title-page">OUR SERVICES</h1>
     <div *ngFor="let service of services; let i = index" [ngClass]="{'full-width-section': true, 'service-section': true, 'odd-section':i % 2 !== 0 }">
         <div class="content">
-            <h3>{{ 'services.' + service + '.headline' | translate }}</h3>
+            <h3>{{ 'services.' + service + '.name' | translate }}</h3>
             <br>
             <p>{{ 'services.' + service + '.definition' | translate }}</p>
-            <a class="btn-small btn-white" routerLink="/services">Learn more</a>
+            <a class="btn-small btn-white" [routerLink]="['/', 'services', service]">Learn more</a>
             <!-- <p>{{ 'services.' + service + '.definition' | translate }}
                 {{ 'services.' + service + '.benefits' | translate }}
                 {{ 'services.' + service + '.description' | translate }}</p> -->
