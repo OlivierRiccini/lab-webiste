@@ -4,6 +4,10 @@
     background-color: transparent;
 }
 
+#home {
+    padding: 60px 0;
+}
+
 .survey-row {
     width: 100vw;
     display: flex;
@@ -31,6 +35,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    #home {
+        padding: 0;
+    }
     .survey-row {
         padding: 15px 10px;
     }

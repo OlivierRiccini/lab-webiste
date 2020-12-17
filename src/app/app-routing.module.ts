@@ -7,6 +7,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FragmentGuard } from './guards/fragment.guard';
 import { ServiceComponent } from './components/service/service.component';
+import { ServiceNameResolve } from './resolvers/service-name.resolver';
 
 const routes: Routes = [
   {
@@ -26,7 +27,9 @@ const routes: Routes = [
     path: 'services/:serviceName',
     // canActivate: [FragmentGuard],
     component: ServiceComponent,
-    data: { title: ':serviceName | Blockbrainers' }
+    resolve: {
+      title: ServiceNameResolve
+    }
   },
   {
     path: 'about',

@@ -14,7 +14,7 @@
         </a>
     </div> -->
     <!-- <div class="card-wrapper" *ngFor="let service of services"> -->
-        <a *ngFor="let service of services" routerLink="/services" [fragment]="service">
+        <a *ngFor="let service of services" [routerLink]="['/', 'services', 'services.' + service + '.name' | translate | urlFormat]">
             <div class="card-content">
                 <h3>{{ 'services.' + service + '.name' | translate }}</h3>
                 <img [src]="'services.' + service + '.icon' | translate" [attr.alt]="service + ' icon'">

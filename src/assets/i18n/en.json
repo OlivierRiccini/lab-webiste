@@ -45,14 +45,14 @@
         }
     },
     "services": {
-        "dapp": {
+        "dappDevelopment": {
             "name": "DApp Development",
             "icon": "./assets/images/services/dapp.svg",
             "definition": "Decentralized applications (dApps) are becoming increasingly popular today. These applications are far different from traditional applications. A dApp does not rely on typical client-server network models. It relies on the power of blockchains on a decentralized network. Several nodes on the network are equal participants in managing the network.",
             "benefits": "The decentralized framework for dApps allows for several benefits and functionalities that are not available with traditional applications.",
             "description": "Blockbrainers is a leading blockchain consulting firm that specializes in blockchain technology. We recognize the immense potential dApps possess for businesses across various sectors to ensure privacy, tamper-proof, and cryptographically secure applications that do not allow complete control to any single entity. We are in the business of providing top-tier blockchain solutions to our clients, and our decentralized application development services can help you achieve your organizational goals. Backed by years of experience and expertise, we can provide you tailor-made dApps based on your business' unique needs."
         },
-        "smartContractsDev": {
+        "smartContractsDevelopment": {
             "name": "Smart Contracts Development",
             "icon": "./assets/images/services/smart-contract-dev.svg",
             "definition": "Smart Contracts efficiently automate the execution of business contracts that require frequent manual transactions between concerned parties. Through tamper-proof and decentralized capabilities powered by blockchain technology, Smart Contracts allow for error-free execution of contracts. The right smart contract comes with predetermined terms agreed by all parties, the specific events that trigger contract execution, and the entire process takes place instantly, efficiently, and without errors upon the terms of the contract being met",
@@ -80,14 +80,14 @@
             "benefits": "Using secure crypto wallet apps gives you several advantages, including better accessibility, enhanced privacy, impervious security, speedier transactions, and most importantly, trust.",
             "description": "At Blockbrainers, we recognize the immense potential of crypto wallets in helping your business achieve more secure operations that follow regulatory compliance. We offer a wide array of crypto wallet services that will design, implement, and integrate secure crypto wallets for your business. We use the latest developments in blockchain technology to ensure top-notch digital wallet apps. Our crypto-wallet service can allow your business to enjoy the full benefits of the decentralized revolution of blockchain technology."
         },
-        "integration": {
+        "blockchainIntegration": {
             "name": "Blockchain Integration",
             "icon": "./assets/images/services/integration.svg",
             "definition": "Blockchain technology is leading the charge in a decentralized revolution. The underlying protocol effectively acts as an immutable ledger of historical records of transactions. There are two types of blockchain networks: Private and Public.",
             "benefits": "Both types of blockchains can offer several advantages for businesses across different industries. It can streamline your operations, improve accountability, and create a more trusting environment. Blockchain integration can transform your business by offering greater security, enhanced collaboration, and increased efficiency.",
             "description": "Like any new technology, blockchain poses challenges for businesses regarding how to adopt it and get the best out of its benefits. Blockbrainers is a top-level blockchain consulting firm that can help your business make the most of the opportunity. Our blockchain integration services can provide you the expert help you need to integrate and implement ideal blockchain solutions for your business without the high cost of experimentation or errors with implementation. Working with us ensures that you get the best of blockchain integration without any trial and error."
         },
-        "training": {
+        "blockchainTraining": {
             "name": "Blockchain Training",
             "icon": "./assets/images/services/training.svg",
             "definition": "Blockchain technology is revolutionizing the business world and helping companies in their transformation. Customized blockchain solutions are paving the way for more innovation in businesses. Blockchain integration offers several benefits for your business that make it more efficient, secure, and successful.",

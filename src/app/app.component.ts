@@ -60,6 +60,7 @@ export class AppComponent implements OnDestroy, AfterViewInit {
       .events.pipe(
         filter(event => event instanceof NavigationEnd),
         map(() => {
+          console.log(this.activatedRoute.snapshot)
           let child = this.activatedRoute.firstChild;
           while (child.firstChild) {
             child = child.firstChild;
