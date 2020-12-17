@@ -1,0 +1,12 @@
+<div class="page-container">
+    <h1 class="title-page">{{ 'services.' + serviceKey + '.name' | translate }}</h1>
+    <div class="section">
+        <img class="icon" [src]="'services.' + serviceKey + '.icon' | translate" [attr.alt]="serviceKey + ' icon'">
+        <p class="text">
+            {{ 'services.' + serviceKey + '.definition' | translate }}<br><br>
+            {{ 'services.' + serviceKey + '.benefits' | translate }}<br><br>
+            {{ 'services.' + serviceKey + '.description' | translate }}
+        </p>
+    </div>
+</div>
+<app-contact-section [title]="'GET IN TOUCH'"></app-contact-section>

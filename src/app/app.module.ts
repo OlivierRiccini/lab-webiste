@@ -31,6 +31,10 @@ import { ContactSocialsComponent } from './components/shared/contact-socials/con
 import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
 import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
 import { QuoteComponent } from './components/shared/quote/quote.component';
+import { ServiceComponent } from './components/service/service.component';
+import { UrlFormatPipe } from './pipes/url-format.pipe';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ServiceNameResolve } from './resolvers/service-name.resolver';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -59,7 +63,9 @@ export function createTranslateLoader(http: HttpClient) {
     ContactComponent,
     ContactSocialsComponent,
     HomeBlogComponent,
-    QuoteComponent
+    QuoteComponent,
+    ServiceComponent,
+    UrlFormatPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -79,7 +85,11 @@ export function createTranslateLoader(http: HttpClient) {
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [TransferState, Title],
+  providers: [
+    TransferState, 
+    Title,
+    ServiceNameResolve
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

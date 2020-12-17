@@ -5,6 +5,9 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    p {
+        text-align: justify;
+    }
     img {
         width: 35%;
     }
@@ -40,6 +43,9 @@
         max-width: 100%;
         text-align: center;
         border: none;
+        p {
+            text-align: center;
+        }
         h1 {
             margin-bottom: 30px;
             font-size: 2rem;

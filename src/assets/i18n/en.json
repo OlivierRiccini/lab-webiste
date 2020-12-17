@@ -45,54 +45,54 @@
         }
     },
     "services": {
-        "dapp": {
-            "headline": "DApp Development",
+        "dappDevelopment": {
+            "name": "DApp Development",
             "icon": "./assets/images/services/dapp.svg",
-            "definition": "A decentralized application is an application built on a decentralized network. A DApp is composed of a smart contract and a frontend interface.",
-            "benefits": "Main benefits: Privacy, No downtime, Censorship resistant, and Immune to single points of failure.",
-            "description": "At Blockbrainers, we really believe in a fully decentralized world. We design and implement Decentralized Applications running on Ethereum, EOS, or Hyperledger."
+            "definition": "Decentralized applications (dApps) are becoming increasingly popular today. These applications are far different from traditional applications. A dApp does not rely on typical client-server network models. It relies on the power of blockchains on a decentralized network. Several nodes on the network are equal participants in managing the network.",
+            "benefits": "The decentralized framework for dApps allows for several benefits and functionalities that are not available with traditional applications.",
+            "description": "Blockbrainers is a leading blockchain consulting firm that specializes in blockchain technology. We recognize the immense potential dApps possess for businesses across various sectors to ensure privacy, tamper-proof, and cryptographically secure applications that do not allow complete control to any single entity. We are in the business of providing top-tier blockchain solutions to our clients, and our decentralized application development services can help you achieve your organizational goals. Backed by years of experience and expertise, we can provide you tailor-made dApps based on your business' unique needs."
         },
-        "smartContractsDev": {
-            "headline": "Smart Contracts Development",
+        "smartContractsDevelopment": {
+            "name": "Smart Contracts Development",
             "icon": "./assets/images/services/smart-contract-dev.svg",
-            "definition": "A smart contract is a self-executing program that runs on a decentralized network such as blockchain.",
-            "benefits": "Main benefits: Transparency, Accuracy, Speed, Security, Storage, Savings, Trust...",
-            "description": "At Blockbrainers, we design, develop, and deploy smart contracts to Ethereum or EOS Blockchain written in Solidity and C++."
+            "definition": "Smart Contracts efficiently automate the execution of business contracts that require frequent manual transactions between concerned parties. Through tamper-proof and decentralized capabilities powered by blockchain technology, Smart Contracts allow for error-free execution of contracts. The right smart contract comes with predetermined terms agreed by all parties, the specific events that trigger contract execution, and the entire process takes place instantly, efficiently, and without errors upon the terms of the contract being met",
+            "benefits": "Smart Contract solutions can benefit businesses across a wide range of industries. The tamper-proof framework powered by blockchain technology allows for more efficient and trustworthy solutions that all concerned parties can rely on.",
+            "description": "Blockbrainers is a leading blockchain consulting firm with extensive experience in the decentralized revolution of blockchain technology. Our experts can provide the benefits of business automation through Smart Contracts to your business. The result can be far better operational efficiency, reduced overall costs, and minimal manual efforts for critical processes while ensuring complete accuracy."
         },
         "smartContractsAudit": {
-            "headline": "Smart Contracts Audit",
+            "name": "Smart Contracts Audit",
             "icon": "./assets/images/services/smart-contract-audit.svg",
-            "definition": "A smart contract audit is a smart contract's code analysis.",
-            "benefits": "Main benefits: Detection and correction of potentials design issues, errors in the code, and security vulnerabilities.",
-            "description": "At Blockbrainers, we share our smart contract expertise to audit yours."
+            "definition": "Smart Contract is a term based on the idea conceptualized by Nick Szabo in 1994. He described the concept as \"a set of promises, specified in the digital form, including protocols within which the parties perform on these promises.\" In simpler words, Smart Contracts are an algorithm. A Smart Contract can execute, verify, enforce, and constrain its operations based on predetermined terms. Smart Contracts play an essential role in using blockchain technology to provide a more effective means of executing an agreement when the terms are met.",
+            "benefits": "Smart Contracts effectively automate the entire process and are cryptographically secured through blockchain technology. However, there is a need to audit Smart Contracts because some vulnerabilities can be exploited if the right blockchain consulting firm doesn't address them. Smart Contract audits remove vulnerabilities like bugs, issues in the algorithms, or any loopholes to ensure the Smart Contract's integrity on any distributed ledger.",
+            "description": "Blockbrainers is a leading blockchain consulting firm with expertise in everything related to blockchain technology. We understand the ins and outs of Smart Contracts and how they operate on various distributed ledgers. Our team analyzes the underlying code in Smart Contracts through our Smart Contracts Audit Service to recognize and correct any bugs through manual and automated testing patterns and detailed reviews. The self-executing nature of Smart Contracts makes them a powerful tool for businesses across multiple industries. Our Smart Contracts Audit service virtually guarantees that you get the best out of this tool."
         },
         "digitalAssets": {
-            "headline": "Digital Assets",
+            "name": "Digital Assets",
             "icon": "./assets/images/services/digital-assets.svg",
-            "definition": "Digital assets include almost any digital content such as crypto-currency tokens listed on stock exchanges and more...",
-            "benefits": "Main benefits: No geographic barriers, No Middlemen, Increased liquidity, Reduced transaction costs, Redemption, Asset interoperability.",
-            "description": "At Blockbrainers, we create crypto tokens such as top-level ERC20 and ERC721 tokens. ERC20 and ERC721, the Ethereum token standard, is a technical standard used for smart contracts on the Ethereum blockchain."
+            "definition": "The term \"Digital Assets\" might seem like a vague phrase. However, it has taken a more specific meaning with the advent of distributed ledger technology. Digital Assets, in this context, refers to any digital content like cryptocurrency tokens listed on stock exchanges. These Digital Assets can serve various purposes for businesses' success across industries, offering them advantages that are powered by blockchain technology.",
+            "benefits": "The use of Digital Assets allows for increased liquidity, reduced transaction costs, asset interoperability with other distributed ledgers, and adequate redemption - all without the involvement of middlemen. These Digital Assets are a standard for transactions with Smart Contracts on blockchain networks like the Ethereum blockchain.",
+            "description": "Blockbrainers is a blockchain consulting firm with experience in everything related to blockchain technology. We can create top-tier cryptocurrency tokens like ERC20 and ERC721, the standard Ethereum token, and much more to help your business benefit from blockchain technology's decentralized revolution."
         },
         "cryptoWallet": {
-            "headline": "Crypto Wallet",
+            "name": "Crypto Wallet",
             "icon": "./assets/images/services/crypto-wallet.svg",
-            "definition": "A crypto wallet is a digital wallet that allows users to store and manage their digital assets such as cryptocurrencies (Ethers, Bitcoins) and tokens. There are different types of wallets.",
-            "benefits": "Main benefits: Accessibility, Security, Privacy, Speed, Trust.",
-            "description": "At Blockbrainers, we design, implement and integrate crypto wallets."
+            "definition": "A cryptocurrency wallet or crypto wallet is a digital wallet or app that lets you store and manage your digital assets like cryptocurrencies. Secure crypto wallets safeguard your privacy and secure your cryptocurrency tokens against unauthorized transactions or fraudulent access.",
+            "benefits": "Using secure crypto wallet apps gives you several advantages, including better accessibility, enhanced privacy, impervious security, speedier transactions, and most importantly, trust.",
+            "description": "At Blockbrainers, we recognize the immense potential of crypto wallets in helping your business achieve more secure operations that follow regulatory compliance. We offer a wide array of crypto wallet services that will design, implement, and integrate secure crypto wallets for your business. We use the latest developments in blockchain technology to ensure top-notch digital wallet apps. Our crypto-wallet service can allow your business to enjoy the full benefits of the decentralized revolution of blockchain technology."
         },
-        "integration": {
-            "headline": "Blockchain Integration",
+        "blockchainIntegration": {
+            "name": "Blockchain Integration",
             "icon": "./assets/images/services/integration.svg",
-            "definition": "Blockchain is a protocol and ledger for building an immutable historical record of transactions. It exists two types of blockchains, public and private.",
-            "benefits": "Main benefits: access to the network control, downtimes are reduced while uptimes are maximized, and scalability is facilitated.",
-            "description": "At Blockbrainers, integrate private blockchain to your business using Hyperledger."
+            "definition": "Blockchain technology is leading the charge in a decentralized revolution. The underlying protocol effectively acts as an immutable ledger of historical records of transactions. There are two types of blockchain networks: Private and Public.",
+            "benefits": "Both types of blockchains can offer several advantages for businesses across different industries. It can streamline your operations, improve accountability, and create a more trusting environment. Blockchain integration can transform your business by offering greater security, enhanced collaboration, and increased efficiency.",
+            "description": "Like any new technology, blockchain poses challenges for businesses regarding how to adopt it and get the best out of its benefits. Blockbrainers is a top-level blockchain consulting firm that can help your business make the most of the opportunity. Our blockchain integration services can provide you the expert help you need to integrate and implement ideal blockchain solutions for your business without the high cost of experimentation or errors with implementation. Working with us ensures that you get the best of blockchain integration without any trial and error."
         },
-        "training": {
-            "headline": "Blockchain Training",
+        "blockchainTraining": {
+            "name": "Blockchain Training",
             "icon": "./assets/images/services/training.svg",
-            "definition": "",
-            "benefits": "Main benefits: ",
-            "description": "At Blockbrainers, we shared our knoledges. We offer functional or technical training for enterprise."
+            "definition": "Blockchain technology is revolutionizing the business world and helping companies in their transformation. Customized blockchain solutions are paving the way for more innovation in businesses. Blockchain integration offers several benefits for your business that make it more efficient, secure, and successful.",
+            "benefits": "However, most businesses lack the expertise to successfully integrate and use blockchain technology.",
+            "description": "Adopting new technology means new knowledge and training to make the best use of it. Blockbrainers is a blockchain consulting firm that provides you the necessary training to help you maximize the benefits of this revolutionary technology. The Blockbrainer team consists of industry-leading blockchain architects and developers eager to share their knowledge and expertise. Our blockchain training service includes a program that gives you hands-on training and support to help your staff smoothly transition to blockchain technology. Our blockchain training service can ensure that your staff gets all the functional and technical training it needs to successfully use blockchain and drive your company’s success."
         }
     },
     "processSteps": {
