@@ -1,24 +1,97 @@
 @import 'src/sass/variables';
 
-#container {
+// #container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     margin: -2.5rem;
+// }
+
+// a {
+//     text-decoration: none;
+//     color: $blue-dark;
+//     outline: none;
+//     margin: 2.5rem;
+// }
+
+// @media screen and (max-width: 500px) {
+//     #container {
+//         margin: -20px;
+//     }
+//     a {
+//         margin: 20px;
+//     }
+// }
+///////
+
+
+.title-box {
+    margin-bottom: 120px;
+}
+
+.flex-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: -2.5rem;
+    margin-bottom: 180px;
 }
 
-a {
-    text-decoration: none;
-    color: $blue-dark;
-    outline: none;
-    margin: 2.5rem;
+.flex-card-inverse {
+    flex-direction: row-reverse;
 }
 
-@media screen and (max-width: 500px) {
-    #container {
-        margin: -20px;
+.flex-card-item {
+    width: 50%;
+    height: 260px;
+    padding: 0px 90px;
+}
+
+.flex-card-img {
+    img {
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        object-fit: scale-down;
     }
-    a {
-        margin: 20px;
+}
+
+.flex-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.flex-card-content-text {
+    display: block;
+    display: -webkit-box;
+    margin: 0 auto;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flex-card:last-child {
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1100px) {
+    .flex-card {
+        margin-bottom: 70px;
+    }
+    .flex-card-item {
+        width: 100%;
+        padding: 0px 40px;
+        text-align: center;
+        align-items: initial;
+    }
+    .flex-card-content {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .flex-card-item {
+        padding: 0px 10px;
     }
 }
