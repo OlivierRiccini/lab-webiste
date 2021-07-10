@@ -1,21 +1,6 @@
 <nav>
-    <a class="nav-item-link" [routerLink]="" (click)="onScroll('#development')" fragment="development">Development</a>
-    <a class="nav-item-link" [routerLink]="" (click)="onScroll('#investments')" fragment="investments">Investments</a>
-    <a class="nav-item-link" [routerLink]="" (click)="onScroll('#infra')" fragment="infra">Infrastructures</a>
-    <!-- <a class="nav-item-link" routerLink="about" routerLinkActive="active-link">{{ 'navbar.about-link' | translate | titlecase }}</a> -->
-    <!-- <a class="nav-item-link" routerLink="careers" routerLinkActive="active-link">{{ 'navbar.careers-link' | translate | titlecase }}</a> -->
-    <!-- <a class="nav-item-link btn-small btn-white" routerLink="contact" routerLinkActive="active-link">{{ 'navbar.contact-link' | translate | titlecase }}</a> -->
+    <a class="nav-item-link" routerLink="development" routerLinkActive="active-link">Development</a>
+    <a class="nav-item-link" routerLink="investments" routerLinkActive="active-link">Investments</a>
+    <a class="nav-item-link" routerLink="infrastructure" routerLinkActive="active-link">Infrastructures</a>
     <a class="nav-item-link btn-small btn-white" [routerLink]="" (click)="onScroll('#contact')" fragment="contact">{{ 'navbar.contact-link' | translate | titlecase }}</a>
-    <!-- <div id="languages" ngbDropdown display="dynamic" placement="bottom-right">
-        <a class="nav-item-link" ngbDropdownToggle>
-            {{ (currentLang$ | async)?.label | titlecase }}
-        </a>
-        <div ngbDropdownMenu class="dropdown-menu">
-            <span
-                *ngFor="let availableLang of availableLanguages" 
-                ngbDropdownItem (click)="$event.preventDefault(); onSwitchLang(availableLang.value)">
-                {{ availableLang.label | titlecase }}
-            </span>
-        </div>
-    </div> -->
 </nav>

@@ -24,17 +24,17 @@ import { SvgLandingImgComponent } from './components/svg-landing-img/svg-landing
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { AboutComponent } from './components/about/about.component';
-import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { ContactSocialsComponent } from './components/shared/contact-socials/contact-socials.component';
 import { ContactSectionComponent } from './components/shared/contact-section/contact-section.component';
 import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
 import { QuoteComponent } from './components/shared/quote/quote.component';
-import { ServiceComponent } from './components/service/service.component';
 import { UrlFormatPipe } from './pipes/url-format.pipe';
-import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { ServiceNameResolve } from './resolvers/service-name.resolver';
+import { DevelopmentComponent } from './components/development/development.component';
+import { InvestmentsComponent } from './components/investments/investments.component';
+import { InfrastructureComponent } from './components/infrastructure/infrastructure.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -59,13 +59,14 @@ export function createTranslateLoader(http: HttpClient) {
     HomeAboutComponent,
     LoaderComponent,
     AboutComponent,
-    ServicesComponent,
     ContactComponent,
     ContactSocialsComponent,
     HomeBlogComponent,
     QuoteComponent,
-    ServiceComponent,
-    UrlFormatPipe
+    UrlFormatPipe,
+    DevelopmentComponent,
+    InvestmentsComponent,
+    InfrastructureComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

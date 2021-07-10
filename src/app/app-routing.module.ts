@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CareersComponent } from './components/careers/careers.component';
-import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { FragmentGuard } from './guards/fragment.guard';
-import { ServiceComponent } from './components/service/service.component';
-import { ServiceNameResolve } from './resolvers/service-name.resolver';
+import { DevelopmentComponent } from './components/development/development.component';
+import { InvestmentsComponent } from './components/investments/investments.component';
+import { InfrastructureComponent } from './components/infrastructure/infrastructure.component';
 
 const routes: Routes = [
   {
@@ -18,18 +17,20 @@ const routes: Routes = [
     data: { title: 'Blockbrainers | Blockchain Consulting Company' }
   },
   {
-    path: 'services',
+    path: 'development',
     canActivate: [FragmentGuard],
-    component: ServicesComponent,
-    data: { title: 'Services | Blockbrainers' }
+    component: DevelopmentComponent,
+    data: { title: 'Development | Blockbrainers' }
   },
   {
-    path: 'services/:serviceName',
-    // canActivate: [FragmentGuard],
-    component: ServiceComponent,
-    resolve: {
-      title: ServiceNameResolve
-    }
+    path: 'investments',
+    component: InvestmentsComponent,
+    data: { title: 'Blockbrainers | Investments' }
+  },
+  {
+    path: 'infrastructure',
+    component: InfrastructureComponent,
+    data: { title: 'Blockbrainers | Infrastructure' }
   },
   {
     path: 'about',
@@ -43,11 +44,6 @@ const routes: Routes = [
     component: CareersComponent,
     data: { title: 'Careers | Blockbrainers' }
   },
-  {
-    path: 'contact',
-    component: ContactComponent,
-    data: { title: 'Blockbrainers | Contact | Blockchain Consulting Company' }
-  }
 ];
 
 @NgModule({
