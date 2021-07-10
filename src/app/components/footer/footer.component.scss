@@ -10,6 +10,23 @@ footer {
     left: 0;
 }
 
+.links {
+    display: flex;
+    justify-content: flex-start;
+    .list-title {
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+        line-height: 1.85rem;
+        padding: 40px 100px 40px 0;
+    }
+    a {
+        color: #fff;
+        // text-decoration: none;
+    }
+}
+
 @media screen and (max-width: 500px) {
     footer {
         padding: 30px $global-sides-padding-small;

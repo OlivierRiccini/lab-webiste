@@ -26,13 +26,13 @@
 
 
 .title-box {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .flex-card {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 180px;
+    margin-bottom: 150px;
 }
 
 .flex-card-inverse {
@@ -58,7 +58,10 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: space-between;
+    // justify-content: space-between;
+    p {
+        margin: 20px 0;
+    }
 }
 
 .flex-card-content-text {
