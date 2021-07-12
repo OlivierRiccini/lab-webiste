@@ -1,12 +1,17 @@
 @import 'src/sass/variables';
 
-// #container {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     margin: -2.5rem;
-// }
+#container {
+    .btn-white {
+        margin: 0 auto;
+    }
+}
 
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
 // a {
 //     text-decoration: none;
 //     color: $blue-dark;
@@ -26,7 +31,7 @@
 
 
 .title-box {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .flex-card {
@@ -60,7 +65,7 @@
     align-items: baseline;
     // justify-content: space-between;
     p {
-        margin: 20px 0;
+        // margin: 20px 0;
     }
 }
 

@@ -1,7 +1,14 @@
-app-contact-section {
-    display: block;
+@import 'src/sass/variables';
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 3rem;
+    a {
+        text-decoration: none;
+    }
 }
 
-.title-page {
-    margin: 0;
+.section ul a:hover {
+    color: $gold;
 }

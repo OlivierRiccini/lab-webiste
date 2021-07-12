@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Icon } from 'src/app/models/icon';
 
 @Component({
   selector: 'app-contact',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  public backgroudColor = '#fff';
+  public icon = Icon;
 
   constructor() { }
 

@@ -32,9 +32,11 @@ import { HomeBlogComponent } from './components/home/home-blog/home-blog.compone
 import { QuoteComponent } from './components/shared/quote/quote.component';
 import { UrlFormatPipe } from './pipes/url-format.pipe';
 import { ServiceNameResolve } from './resolvers/service-name.resolver';
-import { DevelopmentComponent } from './components/development/development.component';
 import { InvestmentsComponent } from './components/investments/investments.component';
 import { InfrastructureComponent } from './components/infrastructure/infrastructure.component';
+import { WorkComponent } from './components/work/work.component';
+import { IconComponent } from './components/shared/icon/icon.component';
+import { ServicesComponent } from './components/services/services.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -60,13 +62,15 @@ export function createTranslateLoader(http: HttpClient) {
     LoaderComponent,
     AboutComponent,
     ContactComponent,
+    ServicesComponent,
     ContactSocialsComponent,
     HomeBlogComponent,
     QuoteComponent,
     UrlFormatPipe,
-    DevelopmentComponent,
     InvestmentsComponent,
-    InfrastructureComponent
+    InfrastructureComponent,
+    WorkComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

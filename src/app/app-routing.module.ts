@@ -4,43 +4,48 @@ import { HomeComponent } from './components/home/home.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { AboutComponent } from './components/about/about.component';
 import { FragmentGuard } from './guards/fragment.guard';
-import { DevelopmentComponent } from './components/development/development.component';
-import { InvestmentsComponent } from './components/investments/investments.component';
 import { InfrastructureComponent } from './components/infrastructure/infrastructure.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ServicesComponent } from './components/services/services.component';
+import { WorkComponent } from './components/work/work.component';
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [FragmentGuard],
+    // canActivate: [FragmentGuard],
     component: HomeComponent,
     pathMatch: 'full',
     data: { title: 'Blockbrainers | Blockchain Consulting Company' }
   },
   {
-    path: 'development',
-    canActivate: [FragmentGuard],
-    component: DevelopmentComponent,
-    data: { title: 'Development | Blockbrainers' }
+    path: 'services',
+    component: ServicesComponent,
+    data: { title: 'Blockbrainers | Services' }
   },
   {
-    path: 'investments',
-    component: InvestmentsComponent,
-    data: { title: 'Blockbrainers | Investments' }
-  },
-  {
-    path: 'infrastructure',
-    component: InfrastructureComponent,
-    data: { title: 'Blockbrainers | Infrastructure' }
+    path: 'work',
+    component: WorkComponent,
+    data: { title: 'Development | Work' }
   },
   {
     path: 'about',
-    canActivate: [FragmentGuard],
     component: AboutComponent,
-    data: { title: 'About | Blockbrainers' }
+    data: { title: 'Development | About' }
   },
   {
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Blockbrainers | Contact' }
+  },
+  // {
+  //   path: 'about',
+  //   canActivate: [FragmentGuard],
+  //   component: AboutComponent,
+  //   data: { title: 'About | Blockbrainers' }
+  // },
+  {
     path: 'careers',
-    canActivate: [FragmentGuard],
+    // canActivate: [FragmentGuard],
     component: CareersComponent,
     data: { title: 'Careers | Blockbrainers' }
   },

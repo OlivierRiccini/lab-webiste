@@ -2,8 +2,8 @@
 
 .card-content {
     padding: 10px;
-    height: 230px;
-    width: 230px;
+    height: 200px;
+    width: 200px;
     border: 1px solid $blue;
     display: flex;
     justify-content: space-around;
@@ -16,7 +16,7 @@
         font-weight: 400;
     }
     img {
-        height: 65px;
+        height: 100px;
         opacity: .75;
     }
     cursor: pointer;

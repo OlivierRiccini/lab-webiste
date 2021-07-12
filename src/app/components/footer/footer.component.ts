@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Icon } from 'src/app/models/icon';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   public currentYear: number;
+  public icon = Icon;
 
   constructor() {
     this.currentYear = new Date().getFullYear();

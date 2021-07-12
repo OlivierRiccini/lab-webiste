@@ -33,7 +33,7 @@ body {
 
 .page-container {
     padding: $navbar-height 0 0 0;
-    min-height: calc(100vh - #{$navbar-height} - #{$footerHeight} - #{$global-sides-padding});
+    min-height: calc(100vh - #{$navbar-height} - #{$footerHeight});
 }
 
 p, a {

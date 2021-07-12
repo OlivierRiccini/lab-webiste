@@ -4,25 +4,32 @@ footer {
     z-index: 1;
     color: $white;
     background-color: $blue-dark;
-    padding: 30px $global-sides-padding;
+    height: $footerHeight;
+    padding: 0 $global-sides-padding;
     width: 100vw;
     position: absolute;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // top: 100%
+    // bottom: 0;
 }
 
 .links {
     display: flex;
-    justify-content: flex-start;
-    .list-title {
-        margin-bottom: 20px;
-    }
-    ul {
-        list-style: none;
-        line-height: 1.85rem;
-        padding: 40px 100px 40px 0;
-    }
+    // justify-content: space-between;
+    // .list-title {
+    //     margin-bottom: 20px;
+    // }
+    // ul {
+    //     list-style: none;
+    //     line-height: 1.85rem;
+    //     padding: 40px 100px 40px 0;
+    // }
     a {
         color: #fff;
+        margin-left: 40px;
         // text-decoration: none;
     }
 }
